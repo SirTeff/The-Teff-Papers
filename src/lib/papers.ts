@@ -48,6 +48,12 @@ export type Paper = {
 
 const papersDirectory = path.join(process.cwd(), "src/content/papers");
 
+function parsePaperDate(date: string) {
+  const timestamp = new Date(`${date}T00:00:00Z`).getTime();
+  if (Number.isNaN(timestamp)) throw new Error(`Invalid paper publication date: ${date}`);
+  return timestamp;
+}
+
 export function getAllPapers(): Paper[] {
   if (!fs.existsSync(papersDirectory)) return [];
 
@@ -60,7 +66,10 @@ export function getAllPapers(): Paper[] {
       return { ...data, content } as Paper;
     })
     .filter((paper) => paper.status.toLowerCase() !== "hidden")
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    .sort((a, b) => {
+      const dateDifference = parsePaperDate(b.date) - parsePaperDate(a.date);
+      return dateDifference || a.title.localeCompare(b.title);
+    });
 }
 
 export function getPaperBySlug(slug: string) {
