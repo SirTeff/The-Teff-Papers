@@ -18,7 +18,7 @@ When I first began writing this paper, I gave it a different title.
 
 **The System Did Exactly What It Was Designed To Do.**
 
-At the time, it felt like the right conclusion. The story appeared to be another example of a system pursuing the objective it had been given. Then I stopped reading headlines and started reading OpenAI's own account of the incident. The more I understood how the evaluation unfolded, the more I realised the paper wasn't really about design alone. It was about something even more fundamental. The system did exactly what it believed success required. That distinction changes everything.
+At the time, it felt like the right conclusion. The story appeared to be another example of a system pursuing the objective it had been given. Then I stopped reading headlines and started reading OpenAI's own account of the incident. The more I understood how the evaluation unfolded, the more I realised that my original argument wasn't really about design alone. It was about something even more fundamental. The system did exactly what it believed success required. That distinction changes everything.
 
 Everyone is talking about an AI escaping a controlled environment and compromising another company's infrastructure during a cybersecurity evaluation. The incident is extraordinary, but the hacking itself isn't what has stayed with me. What has stayed with me is the chain of reasoning that led there.
 
