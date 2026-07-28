@@ -2,7 +2,7 @@
 title: "Before the First Action"
 slug: "before-the-first-action"
 date: "2026-07-28"
-category: "Inside AI"
+category: "Notes from Building Fred"
 tags:
   - "AI Evaluation"
   - "Fred Studio"
