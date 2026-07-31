@@ -44,6 +44,8 @@ h2 { font-size:clamp(2.2rem,4vw,4rem); }
 .paper-card p { color:var(--muted); max-width:720px; }
 .paper-card--featured .tag-list { margin-top:auto; }
 .paper-meta { display:flex; flex-wrap:wrap; gap:10px 24px; color:var(--muted); font-size:.7rem; letter-spacing:.09em; text-transform:uppercase; }
+.paper-meta a { text-decoration:none; }
+.paper-meta a:hover { color:var(--ink); }
 .tag-list { display:flex; flex-wrap:wrap; gap:7px; list-style:none; padding:0; margin:22px 0 0; }
 .tag-list li { padding:5px 10px; border:1px solid var(--line); border-radius:100px; color:var(--muted); font-size:.68rem; }
 .theme-list { list-style:none; padding:0; margin:0; border-bottom:1px solid var(--line); }

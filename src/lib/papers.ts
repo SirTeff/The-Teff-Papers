@@ -39,6 +39,7 @@ export type Paper = {
   excerpt: string;
   readingTime: string;
   status: string;
+  paperType?: string;
   relatedProject?: string;
   version?: string;
   author: string;
@@ -74,6 +75,25 @@ export function getAllPapers(): Paper[] {
 
 export function getPaperBySlug(slug: string) {
   return getAllPapers().find((paper) => paper.slug === slug);
+}
+
+export function getCategorySlug(category: string) {
+  return category
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+export function getAllPaperCategories() {
+  return Array.from(new Set([...categories, ...getAllPapers().map((paper) => paper.category)]));
+}
+
+export function getCategoryBySlug(slug: string) {
+  return getAllPaperCategories().find((category) => getCategorySlug(category) === slug);
+}
+
+export function getPapersByCategory(category: string) {
+  return getAllPapers().filter((paper) => paper.category === category);
 }
 
 export async function renderMarkdown(content: string) {
