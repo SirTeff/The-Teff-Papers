@@ -70,6 +70,7 @@ h2 { font-size:clamp(2.2rem,4vw,4rem); }
 .paper-header { padding-bottom:60px; border-bottom:1px solid var(--line); }
 .paper-header h1 { font-size:clamp(3.3rem,7vw,6rem); margin:25px 0 30px; }
 .paper-deck { color:var(--muted); font-size:1.2rem; line-height:1.6; }
+.paper-supporting-line { color:var(--accent); font-family:var(--font-display),Georgia,serif; font-size:1.45rem; font-style:italic; line-height:1.4; }
 .prose { padding:70px 0 40px; font-family:Georgia,serif; font-size:1.16rem; line-height:1.85; }
 .prose h2 { font-size:2.4rem; margin:2.2em 0 .7em; }
 .prose h3 { font-size:1.7rem; margin:2em 0 .7em; }

@@ -28,6 +28,10 @@ export const supportedTags = [
   "Digital Infrastructure",
   "Documentation",
   "Decision-Making",
+  "AI Safety",
+  "Interpretation",
+  "Contextual Intelligence",
+  "Human Judgement",
 ] as const;
 
 export type Paper = {
@@ -37,6 +41,8 @@ export type Paper = {
   category: string;
   tags: string[];
   excerpt: string;
+  supportingLine?: string;
+  seoDescription?: string;
   readingTime: string;
   status: string;
   paperType?: string;
