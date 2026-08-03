@@ -15,58 +15,22 @@ status: "Draft"
 author: "Teff"
 ---
 
-One of the clearest principles behind Fred+Teff is this: automation should not mean loss of control.
+The most convenient moment in an automated system can also be the moment when the user loses control. A draft becomes a sent message, a recommendation becomes a booked appointment or a prepared application becomes a public submission. The system may have saved a click, but it has also crossed from helping the person think into acting in the person’s name. That change is small at the level of the interface and significant at the level of responsibility.
 
-That may sound simple, but I think it is one of the most important questions in personal AI.
+As AI becomes more capable, the pressure to cross that boundary will increase. An assistant that can write, schedule, search, organise and make recommendations will appear more useful if it can also send, book, apply, move and decide. Some actions genuinely benefit from automation, especially when they are routine, reversible and well understood. The difficulty is that capability does not tell the system which actions the user is ready to delegate. Being able to act is different from having permission to act.
 
-As AI tools become more capable, the temptation will be to let them do more and more on behalf of the user. Write this, send that, book this, apply there, reply to them, move money, change plans, decide the next step. Some of that will be useful, but usefulness is not the only question.
+This is why approval is a central principle behind Fred+Teff. The aim is not to build an assistant that takes over as much work as possible. It is to build one that can understand a task, prepare the work and reduce the effort required to complete it while leaving final authority where the consequences belong. The user should not have to supervise every minor step, but the system should not treat the absence of resistance as consent.
 
-Trust matters.
+Consider a request to help with five AI evaluation job applications. A useful system could identify suitable roles, compare them with the user’s experience, organise deadlines, adapt a CV and prepare cover letters. Each of those steps reduces work without creating an external commitment. Submission changes the nature of the task. The application represents the person, shares information with another organisation and may contain details the user wants to review. Approval at that point is not evidence that the automation failed. It is recognition that preparation and representation carry different levels of consequence.
 
-Control matters.
+The same distinction applies elsewhere. An assistant can draft an email without being authorised to send it. It can propose a calendar change without deciding that another person’s time should be moved. It can organise financial information without transferring money, and it can prepare a workflow without exposing private files to a new service. In each case, the system remains useful before it acts. Approval creates a place where the user can inspect what the system understood, what it intends to do and which information will leave the private workspace.
 
-Consent matters.
+That inspection matters because an AI can be coherent and still misunderstand the request. Context may be incomplete, an old preference may no longer apply or a reasonable instruction may carry a consequence the system cannot see. Once an action reaches the outside world, correcting the misunderstanding may become harder. A message can be read, an application can enter a hiring process and a payment can affect another account. Approval interrupts the chain while the cost of correction is still low.
 
-Context matters.
+Products often treat friction as a design failure, and much of the time they are right. Repeating unnecessary confirmations makes a system tiring to use and can train people to approve without reading. Trust design is not about placing the same warning in front of every action. It requires the system to distinguish between low-risk assistance and consequential execution, between actions that are reversible and those that are not, and between a preference already delegated by the user and a new decision that still needs attention.
 
-A personal AI that can act without the user’s approval may look powerful, but power without trust becomes dangerous very quickly. That is why I think approval has to come before automation.
+That means approval should be proportionate. A user may choose to let the system rename files according to a known rule while requiring confirmation before any file is deleted or shared. Calendar suggestions may be prepared automatically, while invitations remain subject to review. Over time, the person may deliberately expand or reduce what has been delegated. The important point is that the boundary is visible, understandable and controlled by the user rather than inferred permanently from one previous choice.
 
-For Fred+Teff, the goal is not to build an assistant that takes over. The goal is to build an assistant that helps me think, prepare, organise, and act better while still keeping the final authority where it belongs.
+Approval then becomes part of the intelligence rather than a restriction placed around it. A trustworthy system needs to know not only how to complete a task, but when its understanding is sufficient, when uncertainty matters and when another person must make the final judgement. Stopping can be the more intelligent action when the system has reached the edge of its authority. Asking is not weakness when the alternative is confident action based on an assumption.
 
-With the user.
-
-There is a difference between helping and taking over.
-
-A good assistant can understand the task, break it down, prepare the draft, suggest the next move, highlight the risk, organise the information, and ask for approval before anything serious happens.
-
-That is the direction I want Fred to follow.
-
-If I say, "Fred, help me apply for five AI evaluation jobs," the ideal system should eventually understand the goal. It should help find suitable opportunities, prepare application materials, tailor my CV, draft cover letters, and organise the workflow. But before anything is submitted, sent, or committed, Fred should ask.
-
-Not because the AI is weak.
-
-Because the user must remain responsible.
-
-This principle applies beyond job applications. It applies to emails, calendar events, financial decisions, messages, files, automation workflows, personal data, and anything that affects the real world. Anything important should pass through approval.
-
-That is not friction for the sake of friction.
-
-It is trust design.
-
-Many products treat fewer clicks as the highest goal, and I understand why. Speed matters. Convenience matters. But when the system becomes personal, the question changes. The goal is not only how fast something can be done. The better question is whether it can be done in a way the user still trusts.
-
-That is where approval becomes part of the intelligence.
-
-A personal AI should know the difference between low-risk help and high-impact action. It can draft without approval, but it should not send without approval. It can suggest without approval, but it should not decide something important without approval. It can organise information, but it should not expose private information carelessly. It can automate, but it must know when to stop and ask.
-
-That boundary is what makes the system feel safe enough to use.
-
-I think the future of personal AI will depend on this balance. Too little automation, and the assistant becomes just another chatbot. Too much uncontrolled automation, and the assistant becomes difficult to trust. The right balance is not just technical.
-
-It is philosophical.
-
-Fred+Teff should be built around the idea that intelligence is not only about doing things quickly. It is also about knowing when not to act without permission.
-
-That is why approval comes before automation.
-
-Not because the system cannot act, but because the user should remain in command of the actions that matter.
+The future of personal AI will be shaped by the balance between assistance and agency. Too little automation leaves the user carrying work the system could safely reduce. Too much uncontrolled automation creates a system that is efficient until the first serious misunderstanding, after which every convenience is judged against the loss of trust. Approval protects the relationship by allowing capability to grow without making authority disappear. Automation becomes genuinely useful when the system can do more, but still understands that the actions which matter belong to the person whose life they affect.
