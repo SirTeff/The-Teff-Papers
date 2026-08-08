@@ -1,7 +1,6 @@
 const REQUIRED_MARGIN_ENVIRONMENT_VARIABLES = [
   "NEXT_PUBLIC_SUPABASE_URL",
   "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY",
-  "SUPABASE_SECRET_KEY",
 ] as const;
 
 function readBoolean(value: string | undefined, name: string, defaultValue: boolean) {
