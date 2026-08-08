@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageContainer } from "@/components/layout/PageContainer";
+import { PaperEnding } from "@/components/papers/PaperEnding";
 import { PaperMeta } from "@/components/papers/PaperMeta";
+import { ReadingProgress } from "@/components/papers/ReadingProgress";
 import { RelatedPapers } from "@/components/papers/RelatedPapers";
-import { getAllPapers, getPaperBySlug, renderMarkdown } from "@/lib/papers";
+import { getAllPapers, getPaperBySlug, getRelatedPapers, renderMarkdown } from "@/lib/papers";
 
 export function generateStaticParams() { return getAllPapers().map(({ slug }) => ({ slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -27,4 +29,35 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
   };
 }
-export default async function PaperPage({ params }: { params: Promise<{ slug: string }> }) { const paper = getPaperBySlug((await params).slug); if (!paper) notFound(); const content = await renderMarkdown(paper.content); const related = getAllPapers().filter((item) => item.slug !== paper.slug && (item.category === paper.category || item.tags.some((tag) => paper.tags.includes(tag)))).slice(0, 2); return <PageContainer narrow className="paper-page"><Link className="back-link" href="/papers">← The Papers</Link><article><header className="paper-header"><PaperMeta paper={paper} /><h1>{paper.title}</h1><p className={paper.supportingLine ? "paper-deck paper-supporting-line" : "paper-deck"}>{paper.supportingLine ?? paper.excerpt}</p><ul className="tag-list" aria-label="Tags">{paper.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></header><div className="prose" dangerouslySetInnerHTML={{ __html: content }} /><footer className="paper-signature"><p>— {paper.author}</p>{paper.version && <p>Version {paper.version}</p>}</footer></article><RelatedPapers papers={related} /></PageContainer>; }
+export default async function PaperPage({ params }: { params: Promise<{ slug: string }> }) {
+  const paper = getPaperBySlug((await params).slug);
+  if (!paper) notFound();
+
+  const content = await renderMarkdown(paper.content);
+  const related = getRelatedPapers(paper);
+
+  return (
+    <>
+      <ReadingProgress targetId="paper-reading-surface" />
+      <PageContainer narrow className="paper-page">
+        <Link className="back-link" href="/papers">← The Papers</Link>
+        <article id="paper-reading-surface">
+          <header className="paper-header">
+            <PaperMeta paper={paper} />
+            <h1>{paper.title}</h1>
+            <p className={paper.supportingLine ? "paper-deck paper-supporting-line" : "paper-deck"}>
+              {paper.supportingLine ?? paper.excerpt}
+            </p>
+            <ul className="tag-list" aria-label="Tags">
+              {paper.tags.map((tag) => <li key={tag}>{tag}</li>)}
+            </ul>
+          </header>
+          <div className="prose" dangerouslySetInnerHTML={{ __html: content }} />
+          <PaperEnding paper={paper} />
+        </article>
+        <RelatedPapers papers={related} />
+        {/* V2.2 integration point: The Margin belongs here, after paper discovery. */}
+      </PageContainer>
+    </>
+  );
+}

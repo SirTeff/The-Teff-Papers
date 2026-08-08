@@ -102,6 +102,26 @@ export function getPapersByCategory(category: string) {
   return getAllPapers().filter((paper) => paper.category === category);
 }
 
+export function getRelatedPapers(paper: Paper, limit = 2) {
+  return getAllPapers()
+    .filter((candidate) => candidate.slug !== paper.slug)
+    .map((candidate) => ({
+      candidate,
+      sharedTags: candidate.tags.filter((tag) => paper.tags.includes(tag)).length,
+      sameCategory: candidate.category === paper.category,
+    }))
+    .filter(({ sameCategory, sharedTags }) => sameCategory || sharedTags > 0)
+    .sort((a, b) => {
+      if (a.sameCategory !== b.sameCategory) return a.sameCategory ? -1 : 1;
+      if (a.sharedTags !== b.sharedTags) return b.sharedTags - a.sharedTags;
+
+      const dateDifference = parsePaperDate(b.candidate.date) - parsePaperDate(a.candidate.date);
+      return dateDifference || a.candidate.title.localeCompare(b.candidate.title);
+    })
+    .slice(0, limit)
+    .map(({ candidate }) => candidate);
+}
+
 export async function renderMarkdown(content: string) {
   const result = await remark().use(html).process(content);
   return result.toString();

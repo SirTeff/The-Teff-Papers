@@ -19,6 +19,8 @@ const themes = [
 
 export default function Home() {
   const papers = getAllPapers();
+  const latestPaper = papers[0];
+  const recentPapers = papers.slice(1, 5);
   return <>
     <section className="hero"><PageContainer><p className="eyebrow">The Teff Papers</p><h1>Ideas deserve a home.</h1><p className="hero-supporting">This is mine.</p><Button href="#latest-papers">Begin Reading</Button></PageContainer></section>
     <PageContainer>
@@ -27,7 +29,18 @@ export default function Home() {
       <section className="manifesto-preview section-rule"><div><p className="eyebrow">What The Teff Papers explores</p><h2>The work lives in the space where these things meet.</h2></div><div><p>The Teff Papers follows the connection between ideas that are often treated as separate.</p><p>Artificial intelligence is not only about models. It is about judgement, trust, memory, creativity, work, and how humans relate to intelligent tools. Blockchain is not only about tokens. It is about coordination, incentives, ownership, infrastructure, and how value moves across systems. Faith is not separate from leadership, discipline, patience, character, or the way a person builds. Systems thinking is not only for business or technology. It applies to habits, families, teams, societies, products, and personal growth.</p></div></section>
       <section className="themes section-rule"><SectionTitle eyebrow="Main themes" title="Continuing lines of thought" /><ol className="theme-list">{themes.map((theme, index) => <li key={theme}><span>{String(index + 1).padStart(2, "0")}</span>{theme}</li>)}</ol></section>
       <section className="relationship section-rule"><p className="eyebrow">Ideas into practice</p><div className="relationship-lines"><p>The Teff Papers <em>explains why.</em></p><p>Fred+Teff <em>demonstrates what.</em></p><p>Fred Studio <em>develops how.</em></p></div><p className="muted">The Papers are the thinking ground. Fred+Teff is one practical expression of that thinking, while Fred Studio is where some of those ideas may become more structured as products, systems, and future intelligent tools.</p><p className="muted">The Teff Papers will always remain bigger than one product because it is the source of the thinking.</p><Button href="/projects">Explore the projects</Button></section>
-      <section id="latest-papers" className="section-block latest-papers"><SectionTitle eyebrow="Latest papers" title="Start with the latest papers and follow the ideas as they develop." /><p className="section-intro">Some pieces are reflections. Some are product notes. Some are systems thinking. Some are early signals of ideas that may later become products, companies, research, books, or something bigger.</p><div className="paper-list">{papers.slice(0, 5).map((paper) => <PaperCard key={paper.slug} paper={paper} />)}</div><Button href="/papers">View the full archive</Button></section>
+      <section id="latest-papers" className="section-block latest-papers">
+        <SectionTitle eyebrow="Latest papers" title="Start with the latest papers and follow the ideas as they develop." />
+        <p className="section-intro">Some pieces are reflections. Some are product notes. Some are systems thinking. Some are early signals of ideas that may later become products, companies, research, books, or something bigger.</p>
+        {latestPaper && <div className="latest-paper-feature"><PaperCard paper={latestPaper} featured /></div>}
+        {recentPapers.length > 0 && (
+          <div className="recent-papers">
+            <p className="eyebrow">Recent papers</p>
+            <div className="paper-list">{recentPapers.map((paper) => <PaperCard key={paper.slug} paper={paper} />)}</div>
+          </div>
+        )}
+        <Button href="/papers">View the full archive</Button>
+      </section>
     </PageContainer>
     <section className="closing"><PageContainer narrow><p className="eyebrow">An open invitation</p><h2>Start with the Manifesto, then follow the papers as the thinking develops.</h2><Button href="/manifesto">Read the Manifesto</Button></PageContainer></section>
   </>;

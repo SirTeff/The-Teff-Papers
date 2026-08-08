@@ -1,14 +1,31 @@
+import Link from "next/link";
 import type { Paper } from "@/lib/papers";
-import { PaperCard } from "./PaperCard";
+import { PaperMeta } from "./PaperMeta";
 
 export function RelatedPapers({ papers }: { papers: Paper[] }) {
   if (!papers.length) return null;
   return (
-    <section className="related-papers" aria-labelledby="related-heading">
-      <p className="eyebrow">Continue reading</p>
-      <h2 id="related-heading">Related papers</h2>
-      <div className="paper-list">
-        {papers.map((paper) => <PaperCard key={paper.slug} paper={paper} />)}
+    <section className="paper-discovery" aria-labelledby="paper-discovery-heading">
+      <header className="paper-discovery-heading">
+        <p className="eyebrow">Continue exploring</p>
+        <h2 id="paper-discovery-heading">Follow the next line of thought.</h2>
+      </header>
+      <div className="paper-discovery-grid">
+        {papers.map((paper) => (
+          <article className="paper-discovery-card" key={paper.slug}>
+            <PaperMeta paper={paper} />
+            <h3>
+              <Link href={`/papers/${paper.slug}`}>{paper.title}</Link>
+            </h3>
+            <Link
+              className="paper-discovery-link"
+              href={`/papers/${paper.slug}`}
+              aria-label={`Read ${paper.title}`}
+            >
+              Read paper <span aria-hidden="true">→</span>
+            </Link>
+          </article>
+        ))}
       </div>
     </section>
   );
