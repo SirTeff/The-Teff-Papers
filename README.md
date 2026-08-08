@@ -10,6 +10,7 @@ The permanent home for ideas before they become products. This repository contai
 - Markdown content with YAML front matter
 - `gray-matter` and `remark` for content processing
 - Vercel-ready deployment
+- Supabase PostgreSQL infrastructure for future interactive content (disabled by default)
 
 ## Run locally
 
@@ -39,7 +40,15 @@ src/
   content/papers/      Markdown papers
   lib/                 Content loading and site metadata
 EDITORIAL_PHILOSOPHY_V2.md
+supabase/             Additive database migrations and database security tests
+docs/                 Technical architecture notes
 ```
+
+## V2.2 Margin infrastructure and Teff Studio
+
+Stage A introduces the private backend foundation for future interactive content. Stage B adds the protected Teff Studio login and transactional moderation workspace. Teff-authored papers remain in Markdown, `MARGIN_ENABLED=false`, and no public Margin interface or submission endpoint exists yet.
+
+Copy `.env.example` to `.env.local` only when working on the Margin or Studio integration. See [`docs/v2-margin-architecture.md`](docs/v2-margin-architecture.md) before applying the Supabase migrations or configuring authentication.
 
 ## Add a paper
 
