@@ -100,7 +100,7 @@ Middleware refreshes cookie sessions as a convenience. Every Studio page and Ser
 
 1. Install the Supabase CLI or use `npx supabase`.
 2. Start a disposable local Supabase instance.
-3. Apply all migrations in timestamp order, including `202608080005_create_margin_submission_gateway.sql`.
+3. Apply all migrations in timestamp order, including `20260808191600_create_margin_submission_gateway.sql`.
 4. Run all SQL tests, including `supabase/tests/margin_submission_security.sql`, against that disposable database.
 5. Confirm every test transaction completes and rolls back without an assertion error.
 6. Copy `.env.example` to `.env.local` and set the Supabase URL, publishable key, secret key, and a test administrator email.
