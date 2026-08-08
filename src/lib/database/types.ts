@@ -85,6 +85,31 @@ export type SupabaseDatabase = {
         Update: never;
         Relationships: [];
       };
+      margin_submission_rate_limits: {
+        Row: {
+          identifier_hash: string;
+          target_type: MarginTargetTypeDatabase;
+          target_key: string;
+          window_start: string;
+          request_count: number;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          identifier_hash: string;
+          target_type: MarginTargetTypeDatabase;
+          target_key: string;
+          window_start: string;
+          request_count?: number;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: Partial<{
+          request_count: number;
+          updated_at: string;
+        }>;
+        Relationships: [];
+      };
     };
     Views: Record<string, never>;
     Functions: {
@@ -131,6 +156,26 @@ export type SupabaseDatabase = {
       admin_set_margin_featured: {
         Args: { p_entry_id: string; p_featured: boolean; p_actor: string; p_reason?: string | null };
         Returns: MarginEntryRow[];
+      };
+      consume_margin_submission_rate_limit: {
+        Args: {
+          p_identifier_hash: string;
+          p_target_type: MarginTargetTypeDatabase;
+          p_target_key: string;
+          p_window_seconds: number;
+          p_request_limit: number;
+        };
+        Returns: Array<{ allowed: boolean; remaining: number; retry_after_seconds: number }>;
+      };
+      submit_margin_entry: {
+        Args: {
+          p_target_type: MarginTargetTypeDatabase;
+          p_target_key: string;
+          p_display_name: string | null;
+          p_body: string;
+          p_submission_key: string;
+        };
+        Returns: Array<{ id: string; status: MarginStatusDatabase; created_at: string; duplicate: boolean }>;
       };
     };
     Enums: {

@@ -5,4 +5,5 @@ const marginEnvironment = getMarginEnvironmentStatus(process.env);
 
 export const features = Object.freeze({
   marginEnabled: marginEnvironment.enabled,
+  marginSubmissionsEnabled: marginEnvironment.submissionsEnabled,
 });

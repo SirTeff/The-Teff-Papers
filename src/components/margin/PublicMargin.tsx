@@ -1,4 +1,7 @@
+import { features } from "@/lib/config/features";
 import { getCachedApprovedMarginEntries } from "@/lib/margin/public-cache";
+import { getMarginSettings } from "@/lib/margin/repository";
+import { MarginSubmissionForm } from "./MarginSubmissionForm";
 
 const marginDateFormatter = new Intl.DateTimeFormat("en-GB", {
   day: "numeric",
@@ -8,8 +11,18 @@ const marginDateFormatter = new Intl.DateTimeFormat("en-GB", {
 });
 
 export async function PublicMargin({ slug }: { slug: string }) {
-  const result = await getCachedApprovedMarginEntries("paper", slug);
+  const [result, setting] = await Promise.all([
+    getCachedApprovedMarginEntries("paper", slug),
+    features.marginSubmissionsEnabled ? getMarginSettings("paper", slug) : Promise.resolve(null),
+  ]);
   if (result.state !== "ready") return null;
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim();
+  const showSubmissionForm = Boolean(
+    features.marginSubmissionsEnabled
+    && setting?.state === "ready"
+    && setting.data.isOpen
+    && turnstileSiteKey,
+  );
 
   return (
     <section className="public-margin" aria-labelledby="public-margin-heading">
@@ -40,6 +53,7 @@ export async function PublicMargin({ slug }: { slug: string }) {
           })}
         </div>
       )}
+      {showSubmissionForm && turnstileSiteKey && <MarginSubmissionForm slug={slug} siteKey={turnstileSiteKey} />}
     </section>
   );
 }

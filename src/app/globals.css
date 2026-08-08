@@ -132,6 +132,26 @@ h2 { font-size:clamp(2.2rem,4vw,4rem); }
 .public-margin-featured { padding:3px 8px; border:1px solid var(--line-strong); color:var(--accent); }
 .public-margin-body { max-width:690px; margin:0; color:var(--ink-soft); font-family:Georgia,"Times New Roman",serif; font-size:1.06rem; line-height:1.78; overflow-wrap:anywhere; white-space:pre-wrap; }
 .public-margin-empty { margin:0; padding:30px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); color:var(--muted); }
+.margin-submission { margin-top:68px; padding-top:58px; border-top:1px solid var(--line-strong); }
+.margin-submission-heading { max-width:650px; margin-bottom:34px; }
+.margin-submission-heading .eyebrow { margin-bottom:12px; }
+.margin-submission-heading h3 { margin:0 0 18px; font-size:clamp(1.85rem,3.5vw,2.45rem); line-height:1.08; }
+.margin-submission-heading > p:last-child { margin:0; color:var(--muted); }
+.margin-submission-form { display:grid; max-width:680px; }
+.margin-submission-form label { margin:22px 0 8px; color:var(--ink); font-size:.78rem; font-weight:600; }
+.margin-submission-form label span { margin-left:7px; color:var(--muted); font-size:.68rem; font-weight:400; text-transform:uppercase; letter-spacing:.07em; }
+.margin-submission-form input,.margin-submission-form textarea { width:100%; border:1px solid var(--line-strong); border-radius:0; background:var(--paper-lift); color:var(--ink); font:inherit; padding:13px 14px; }
+.margin-submission-form textarea { min-height:190px; resize:vertical; line-height:1.65; }
+.margin-submission-form input:focus,.margin-submission-form textarea:focus { border-color:var(--accent); outline:2px solid transparent; box-shadow:0 0 0 1px var(--accent); }
+.margin-form-guidance,.margin-character-count { margin:8px 0 0; color:var(--muted); font-size:.72rem; }
+.margin-character-count { justify-self:end; }
+.margin-turnstile { min-height:65px; margin-top:26px; }
+.margin-submission-form button { justify-self:start; margin-top:22px; border:1px solid var(--ink); background:var(--ink); color:var(--paper); font:inherit; font-size:.78rem; font-weight:600; padding:12px 20px; cursor:pointer; }
+.margin-submission-form button:disabled { cursor:not-allowed; opacity:.55; }
+.margin-form-status { min-height:1.6em; margin:16px 0 0; font-size:.82rem; }
+.margin-form-status--success { color:var(--accent); }
+.margin-form-status--error { color:#713c35; }
+.margin-honeypot { position:absolute !important; width:1px !important; height:1px !important; padding:0 !important; margin:-1px !important; overflow:hidden !important; clip:rect(0,0,0,0) !important; white-space:nowrap !important; border:0 !important; }
 .two-column-copy { display:grid; grid-template-columns:repeat(2,1fr); gap:80px 12%; }
 .two-column-copy h2,.project-card h2 { font-size:2.6rem; }
 .two-column-copy p { color:var(--muted); }
@@ -206,6 +226,8 @@ h2 { font-size:clamp(2.2rem,4vw,4rem); }
   .public-margin-heading { margin-bottom:32px; }
   .public-margin-entry-header { align-items:flex-start; flex-direction:column; gap:10px; }
   .public-margin-entry-meta { justify-content:flex-start; }
+  .margin-submission { margin-top:54px; padding-top:48px; }
+  .margin-turnstile { max-width:100%; overflow:hidden; }
   .two-column-copy { gap:50px; }
   .about-section + .about-section { margin-top:56px; padding-top:48px; }
   .about-topics { grid-template-columns:1fr; }
