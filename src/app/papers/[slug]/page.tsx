@@ -56,8 +56,8 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
           <div className="prose" dangerouslySetInnerHTML={{ __html: content }} />
           <PaperEnding paper={paper} />
         </article>
-        <RelatedPapers papers={related} />
         <PublicMargin slug={paper.slug} />
+        <RelatedPapers papers={related} />
       </PageContainer>
     </>
   );
