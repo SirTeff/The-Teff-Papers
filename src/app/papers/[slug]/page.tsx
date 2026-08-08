@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageContainer } from "@/components/layout/PageContainer";
+import { PublicMargin } from "@/components/margin/PublicMargin";
 import { PaperEnding } from "@/components/papers/PaperEnding";
 import { PaperMeta } from "@/components/papers/PaperMeta";
 import { ReadingProgress } from "@/components/papers/ReadingProgress";
@@ -56,7 +57,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
           <PaperEnding paper={paper} />
         </article>
         <RelatedPapers papers={related} />
-        {/* V2.2 integration point: The Margin belongs here, after paper discovery. */}
+        <PublicMargin slug={paper.slug} />
       </PageContainer>
     </>
   );
