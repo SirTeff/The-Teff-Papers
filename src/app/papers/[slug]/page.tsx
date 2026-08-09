@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { PublicMargin } from "@/components/margin/PublicMargin";
-import { PaperEnding } from "@/components/papers/PaperEnding";
 import { PaperMeta } from "@/components/papers/PaperMeta";
 import { ReadingProgress } from "@/components/papers/ReadingProgress";
 import { RelatedPapers } from "@/components/papers/RelatedPapers";
@@ -54,7 +53,6 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
             </ul>
           </header>
           <div className="prose" dangerouslySetInnerHTML={{ __html: content }} />
-          <PaperEnding paper={paper} />
         </article>
         <PublicMargin slug={paper.slug} />
         <RelatedPapers papers={related} />
