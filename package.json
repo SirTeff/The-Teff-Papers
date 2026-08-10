@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit --incremental false"
+    "typecheck": "tsc --noEmit --incremental false",
+    "test:margin-notifications": "node --experimental-strip-types --test tests/margin-notification.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",
@@ -22,6 +23,7 @@
     "react-dom": "^19.1.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "resend": "6.18.1",
     "server-only": "^0.0.1"
   },
   "devDependencies": {

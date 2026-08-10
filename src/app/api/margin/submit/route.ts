@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { after, NextRequest, NextResponse } from "next/server";
 import { features } from "@/lib/config/features";
 import { getPaperBySlug } from "@/lib/papers";
 import { getMarginSettings } from "@/lib/margin/repository";
@@ -6,6 +6,14 @@ import {
   MarginSubmissionRepositoryError,
   submitMarginEntry,
 } from "@/lib/margin/submission-repository";
+import {
+  getMarginNotificationErrorCategory,
+  sendMarginAdminNotification,
+} from "@/lib/margin/notification";
+import {
+  runMarginNotificationSafely,
+  shouldScheduleMarginNotification,
+} from "@/lib/margin/notification-core";
 import { validateMarginSubmission } from "@/lib/margin/validation";
 import {
   createSubmissionRateLimitIdentity,
@@ -83,7 +91,8 @@ export async function POST(request: NextRequest) {
   if (!validation.success) {
     return response({ ok: false, code: "validation", message: "Please review your note.", issues: validation.issues }, 400);
   }
-  if (!getPaperBySlug(validation.data.targetKey)) {
+  const paper = getPaperBySlug(validation.data.targetKey);
+  if (!paper) {
     return response({ ok: false, code: "validation", message: "This paper could not be found." }, 400);
   }
 
@@ -132,7 +141,24 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    await submitMarginEntry(validation.data);
+    const confirmation = await submitMarginEntry(validation.data);
+    if (shouldScheduleMarginNotification(confirmation)) {
+      after(() => runMarginNotificationSafely(
+        () => sendMarginAdminNotification({
+          entryId: confirmation.id,
+          paperTitle: paper.title,
+          displayName: validation.data.displayName,
+          body: validation.data.body,
+          createdAt: confirmation.createdAt,
+        }),
+        (error) => {
+          console.error("[margin] administrator notification failed", {
+            entryId: confirmation.id,
+            category: getMarginNotificationErrorCategory(error),
+          });
+        },
+      ));
+    }
     return acceptedResponse();
   } catch (error) {
     if (error instanceof MarginSubmissionRepositoryError && error.code === "closed") {

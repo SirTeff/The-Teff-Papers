@@ -5,6 +5,7 @@ import type { SupabaseDatabase } from "@/lib/database/types";
 import type { MarginStatus, MarginSubmissionInput, MarginTargetType } from "./types";
 
 export type SubmissionConfirmation = {
+  id: string;
   status: MarginStatus;
   duplicate: boolean;
   createdAt: string;
@@ -83,6 +84,7 @@ export async function submitMarginEntry(input: MarginSubmissionInput): Promise<S
   }
 
   return {
+    id: confirmation.id,
     status: confirmation.status,
     duplicate: confirmation.duplicate,
     createdAt: confirmation.created_at,
