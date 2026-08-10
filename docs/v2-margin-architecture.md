@@ -87,6 +87,12 @@ The fixed-window policy is five verified attempts per visitor digest and paper p
 
 `submit_margin_entry` checks the authoritative setting again, inserts new entries as `pending`, and returns only minimal confirmation data. Exact UUID/payload retries are idempotent; changed payloads using the same UUID fail. No submission creates a moderation event or invalidates the approved-note cache. Studio approval remains the only publication path.
 
+## Administrator email notifications
+
+For a genuinely new pending row, the submission route schedules a best-effort plain-text administrator email after the reader response completes. The message contains an approximately 300-character note preview and a trusted link to the matching Teff Studio moderation entry. The database remains authoritative: notification configuration or provider failure never changes the stored entry or the reader's successful response. Exact submission retries return `duplicate = true` from PostgreSQL and do not schedule another email; the provider request also uses the entry ID as an idempotency key.
+
+The notification recipient, verified sender and Resend API key are server-only configuration. The Studio link is built from the canonical `siteConfig.url`, never from request headers. Email is an operational convenience only; moderation and publication continue exclusively through Teff Studio.
+
 ## Teff Studio routes and ordering
 
 - `/studio/login`: email/password sign-in only; no sign-up or social login.
