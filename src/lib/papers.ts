@@ -8,6 +8,7 @@ export const categories = [
   "Sunday Reflections",
   "Inside AI",
   "Notes from Building Fred",
+  "The Frontier",
   "Systems Thinking",
   "The Future Is Personal",
 ] as const;
