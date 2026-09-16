@@ -15,7 +15,18 @@ export async function PublicMargin({ slug }: { slug: string }) {
     getCachedApprovedMarginEntries("paper", slug),
     features.marginSubmissionsEnabled ? getMarginSettings("paper", slug) : Promise.resolve(null),
   ]);
-  if (result.state !== "ready") return null;
+  if (result.state === "disabled") return null;
+  if (result.state === "unavailable") {
+    return (
+      <section className="public-margin public-margin-unavailable" aria-labelledby="public-margin-heading">
+        <header className="public-margin-heading">
+          <p className="eyebrow">The Margin</p>
+          <h2 id="public-margin-heading">Reader notes</h2>
+          <p>Reader notes are temporarily unavailable. The paper remains available while this section reconnects.</p>
+        </header>
+      </section>
+    );
+  }
   const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim();
   const showSubmissionForm = Boolean(
     features.marginSubmissionsEnabled

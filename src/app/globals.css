@@ -127,6 +127,7 @@ h2 { font-size:clamp(2.2rem,4vw,4rem); }
 .public-margin-heading .eyebrow { margin-bottom:12px; }
 .public-margin-heading h2 { margin:0 0 20px; font-size:clamp(2.15rem,4vw,3.15rem); line-height:1.03; }
 .public-margin-heading > p:last-child { margin:0; color:var(--muted); }
+.public-margin-unavailable .public-margin-heading { margin-bottom:0; }
 .public-margin-entries { border-top:1px solid var(--line); }
 .public-margin-entry { padding:34px 0 38px; border-bottom:1px solid var(--line); }
 .public-margin-entry-header { display:flex; align-items:baseline; justify-content:space-between; gap:18px 28px; margin-bottom:20px; }

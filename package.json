@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit --incremental false",
-    "test:margin-notifications": "node --experimental-strip-types --test tests/margin-notification.test.mjs"
+    "test:margin-notifications": "node --experimental-strip-types --test tests/margin-notification.test.mjs",
+    "test:margin-database-errors": "node --experimental-strip-types --test tests/margin-database-error.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",
