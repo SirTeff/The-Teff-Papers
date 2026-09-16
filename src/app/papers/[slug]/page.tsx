@@ -8,6 +8,8 @@ import { ReadingProgress } from "@/components/papers/ReadingProgress";
 import { RelatedPapers } from "@/components/papers/RelatedPapers";
 import { getAllPapers, getPaperBySlug, getRelatedPapers, renderMarkdown } from "@/lib/papers";
 
+export const revalidate = 300;
+
 export function generateStaticParams() { return getAllPapers().map(({ slug }) => ({ slug })); }
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const paper = getPaperBySlug((await params).slug);

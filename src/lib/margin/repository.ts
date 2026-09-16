@@ -4,6 +4,7 @@ import { MarginConfigurationError } from "@/lib/database/environment";
 import { createSupabaseServerClient } from "@/lib/database/supabase-server";
 import type { PublicMarginEntryRow } from "@/lib/database/types";
 import type { MarginReadResult, MarginSettings, MarginTargetType, PublicMarginEntry } from "./types";
+import { describeMarginDatabaseError } from "./database-error";
 
 function mapPublicEntry(entry: PublicMarginEntryRow): PublicMarginEntry {
   return {
@@ -22,7 +23,7 @@ function reportReadFailure(operation: string, targetType: MarginTargetType, targ
   console.error(`[margin] ${operation} failed`, {
     targetType,
     targetKey,
-    error: error instanceof Error ? error.message : "Unknown database error",
+    error: describeMarginDatabaseError(error),
   });
 }
 
