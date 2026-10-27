@@ -20,6 +20,8 @@ import {
   databaseSubmissionRateLimiter,
 } from "@/lib/security/rate-limit";
 import { verifyTurnstileToken } from "@/lib/security/turnstile";
+import { hasMismatchedSubmissionOrigin, isMarginTurnstileContext } from "@/lib/security/submission-policy";
+import { readLimitedRequestBody, RequestBodyTooLargeError } from "@/lib/security/request-body";
 
 export const runtime = "nodejs";
 
@@ -43,18 +45,7 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 }
 
 function hasMismatchedOrigin(request: NextRequest) {
-  const origin = request.headers.get("origin");
-  if (!origin) return false;
-  try {
-    const forwardedHost = request.headers.get("x-forwarded-host")?.split(",", 1)[0]?.trim();
-    const host = forwardedHost || request.headers.get("host");
-    const forwardedProtocol = request.headers.get("x-forwarded-proto")?.split(",", 1)[0]?.trim();
-    const protocol = forwardedProtocol || request.nextUrl.protocol.replace(":", "");
-    const expectedOrigin = host ? new URL(`${protocol}://${host}`).origin : request.nextUrl.origin;
-    return new URL(origin).origin !== expectedOrigin;
-  } catch {
-    return true;
-  }
+  return hasMismatchedSubmissionOrigin(request.headers.get("origin"), request.nextUrl.href);
 }
 
 export async function POST(request: NextRequest) {
@@ -72,12 +63,12 @@ export async function POST(request: NextRequest) {
 
   let payload: unknown;
   try {
-    const raw = await request.text();
-    if (raw.length > MAX_REQUEST_LENGTH) {
+    const raw = await readLimitedRequestBody(request, MAX_REQUEST_LENGTH);
+    payload = JSON.parse(raw);
+  } catch (error) {
+    if (error instanceof RequestBodyTooLargeError) {
       return response({ ok: false, code: "validation", message: "The note is too large to process." }, 413);
     }
-    payload = JSON.parse(raw);
-  } catch {
     return response({ ok: false, code: "validation", message: "The submission could not be read." }, 400);
   }
   if (!isRecord(payload)) {
@@ -120,7 +111,7 @@ export async function POST(request: NextRequest) {
     remoteIp: identity.remoteIp,
     idempotencyKey: validation.data.submissionKey,
   });
-  if (!turnstile.success || (turnstile.action && turnstile.action !== "margin-submit")) {
+  if (!turnstile.success || !isMarginTurnstileContext(turnstile, request.nextUrl.hostname)) {
     return response({ ok: false, code: "verification", message: "Please complete the verification and try again." }, 400);
   }
 
