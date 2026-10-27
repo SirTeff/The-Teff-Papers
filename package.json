@@ -12,14 +12,17 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit --incremental false",
     "test:margin-notifications": "node --experimental-strip-types --test tests/margin-notification.test.mjs",
-    "test:margin-database-errors": "node --experimental-strip-types --test tests/margin-database-error.test.mjs"
+    "test:margin-database-errors": "node --experimental-strip-types --test tests/margin-database-error.test.mjs",
+    "test:security": "node --test tests/security.test.mjs",
+    "test:sql-security": "node scripts/security/test-sql-security.mjs",
+    "security:secrets": "node scripts/security/scan-secrets.mjs --history"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",
     "@supabase/supabase-js": "^2.112.2",
     "@vercel/analytics": "^2.0.1",
     "gray-matter": "^4.0.3",
-    "next": "^15.5.23",
+    "next": "15.5.28",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "remark": "^15.0.1",
@@ -33,7 +36,12 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "eslint": "^9.0.0",
-    "eslint-config-next": "^15.5.23",
+    "eslint-config-next": "15.5.28",
     "typescript": "^5.8.0"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "8.5.32"
+    }
   }
 }

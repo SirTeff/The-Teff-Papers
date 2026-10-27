@@ -138,4 +138,4 @@ Stage D stops at anonymous, moderated, plain-text submissions. It does not add a
 
 ## Dependency security note
 
-Stage A updates Next.js and `eslint-config-next` to the patched 15.5 maintenance release and applies compatible `js-yaml` and `nanoid` fixes. The production audit still reports PostCSS and Sharp advisories inherited through Next.js 15. Resolving those advisories currently requires the breaking Next.js 16.3 upgrade, so that framework migration is intentionally deferred to a separate, tested change rather than being folded into backend infrastructure work.
+The security-remediation branch pins Next.js and `eslint-config-next` to 15.5.28, resolves Sharp 0.35.5, and overrides Next.js's pinned PostCSS dependency to 8.5.32. Compatible transitive updates also address `js-yaml`, `source-map-js` and development-only `brace-expansion` advisories. A major Next.js upgrade is not required for these fixes. See `docs/security-remediation.md` for audit scope, regression results and the owner-approved release gate; branch changes do not update production until separately approved and deployed.

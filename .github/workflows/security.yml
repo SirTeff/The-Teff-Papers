@@ -1,0 +1,58 @@
+name: Security checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      MARGIN_ENABLED: "false"
+      MARGIN_SUBMISSIONS_ENABLED: "false"
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: disposable-ci-only
+          POSTGRES_DB: teff_security_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "24"
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run security:secrets
+      - run: npm audit --omit=dev --audit-level=high
+      - run: npm audit --audit-level=high
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run test:margin-notifications
+      - run: npm run test:margin-database-errors
+      - run: npm run test:security
+      - run: npm run test:sql-security
+        env:
+          SECURITY_TEST_DATABASE: disposable
+          PGHOST: 127.0.0.1
+          PGPORT: "5432"
+          PGDATABASE: teff_security_test
+          PGUSER: postgres
+          PGPASSWORD: disposable-ci-only
+      - run: npm run build

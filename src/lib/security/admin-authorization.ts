@@ -27,7 +27,7 @@ export async function createAdminAuthorization(): Promise<AdminAuthorization> {
     if (error || !data.user) throw new StudioAuthorizationError("unauthenticated", "Authentication is required.");
 
     const email = data.user.email ? normalizeAdminEmail(data.user.email) : "";
-    if (!email || !getStudioAdminEmails().has(email)) {
+    if (!email || !data.user.email_confirmed_at || !getStudioAdminEmails().has(email)) {
       throw new StudioAuthorizationError("unauthorized", "This account is not authorized for Teff Studio.");
     }
 
