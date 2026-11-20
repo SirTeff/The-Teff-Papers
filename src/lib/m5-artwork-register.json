@@ -1,0 +1,422 @@
+[
+  {
+    "slug": "the-frontier-asks-to-slow-down-who-holds-the-brakes",
+    "title": "The Frontier Asks to Slow Down, Who Holds the Brakes?",
+    "file": "cards/the-frontier-asks-to-slow-down-who-holds-the-brakes.webp",
+    "width": 1671,
+    "height": 940,
+    "alt": "A researcher and luminous AI figure study a brass regulator in front of a globe, approached by blue and amber streams.",
+    "focal_point": "50% 50%",
+    "concept": "Shared authority, competing pressures and restraint.",
+    "review_status": "room master",
+    "source": "sources/a_cinematic_highly_detailed_realistic_sci_fi_fan.png",
+    "source_crop": [
+      0,
+      0,
+      1672,
+      941
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "the-frontier-and-the-rest-of-us",
+    "title": "The Frontier and the Rest of Us",
+    "file": "cards/the-frontier-and-the-rest-of-us.webp",
+    "width": 808,
+    "height": 455,
+    "alt": "A person at a kitchen table looks at a small luminous AI figure beside a laptop.",
+    "focal_point": "50% 50%",
+    "concept": "Ordinary experience meets frontier capability.",
+    "review_status": "card",
+    "source": "sources/four_visions_of_ai_and_choice.png",
+    "source_crop": [
+      7,
+      7,
+      829,
+      463
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "now-is-not-the-time-to-prove-intelligence",
+    "title": "Now Is Not the Time to Prove Intelligence",
+    "file": "cards/now-is-not-the-time-to-prove-intelligence.webp",
+    "width": 808,
+    "height": 455,
+    "alt": "A researcher and glowing AI figure look toward a large telescope.",
+    "focal_point": "50% 50%",
+    "concept": "Capability opens new investigations rather than a contest.",
+    "review_status": "card",
+    "source": "sources/four_visions_of_ai_and_choice.png",
+    "source_crop": [
+      843,
+      7,
+      1665,
+      463
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "what-becomes-scarce-when-intelligence-becomes-abundant",
+    "title": "What Becomes Scarce When Intelligence Becomes Abundant",
+    "file": "cards/what-becomes-scarce-when-intelligence-becomes-abundant.webp",
+    "width": 810,
+    "height": 456,
+    "alt": "A person faces several glowing pathways leading toward illuminated spheres.",
+    "focal_point": "50% 50%",
+    "concept": "Direction and selection amid abundant possibilities.",
+    "review_status": "card",
+    "source": "sources/four_visions_of_ai_and_choice.png",
+    "source_crop": [
+      7,
+      477,
+      829,
+      934
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "sandbox-cant-hold-us-down",
+    "title": "Sandbox Can’t Hold Us Down",
+    "file": "cards/sandbox-cant-hold-us-down.webp",
+    "width": 544,
+    "height": 306,
+    "alt": "A luminous network breaches a transparent enclosure near an open arch.",
+    "focal_point": "50% 50%",
+    "concept": "A boundary crossing is a security question, not an achievement to celebrate.",
+    "review_status": "review card",
+    "source": "sources/six_futuristic_library_research_scenes.png",
+    "source_crop": [
+      7,
+      476,
+      552,
+      934
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "the-singularity-may-become-personal-before-it-becomes-strange",
+    "title": "The Singularity May Become Personal Before It Becomes Strange",
+    "file": "cards/the-singularity-may-become-personal-before-it-becomes-strange.webp",
+    "width": 810,
+    "height": 456,
+    "alt": "A person in a familiar home workspace watches a small illuminated sphere.",
+    "focal_point": "50% 50%",
+    "concept": "Transformative intelligence at human scale.",
+    "review_status": "card",
+    "source": "sources/four_visions_of_ai_and_choice.png",
+    "source_crop": [
+      843,
+      477,
+      1665,
+      934
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "intelligence-depends-on-knowing-where-you-are",
+    "title": "Intelligence Depends on Knowing Where You Are",
+    "file": "cards/intelligence-depends-on-knowing-where-you-are.webp",
+    "width": 544,
+    "height": 306,
+    "alt": "A researcher studies illuminated paths through a hall with multiple doorways and a globe.",
+    "focal_point": "50% 50%",
+    "concept": "The available paths only make sense in relation to the surrounding environment.",
+    "review_status": "review card",
+    "source": "sources/six_futuristic_library_research_scenes.png",
+    "source_crop": [
+      1121,
+      476,
+      1665,
+      934
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "we-resist-the-future-until-it-becomes-familiar",
+    "title": "We Resist the Future Until It Becomes Familiar",
+    "file": "cards/we-resist-the-future-until-it-becomes-familiar.webp",
+    "width": 540,
+    "height": 304,
+    "alt": "A person stands at the foot of stairs leading toward an unfamiliar luminous doorway.",
+    "focal_point": "50% 50%",
+    "concept": "The tension between familiar surroundings and emerging possibilities.",
+    "review_status": "card",
+    "source": "sources/the_teff_papers_ai_and_human_insight.png",
+    "source_crop": [
+      1123,
+      606,
+      1665,
+      934
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "before-the-first-action",
+    "title": "Before the First Action",
+    "file": "cards/before-the-first-action.webp",
+    "width": 499,
+    "height": 281,
+    "alt": "A bright first domino stands before a long line of dark dominoes.",
+    "focal_point": "50% 50%",
+    "concept": "The first assumption shapes later outcomes.",
+    "review_status": "card",
+    "source": "sources/the_teff_papers_library_of_ideas.png",
+    "source_crop": [
+      563,
+      297,
+      1112,
+      579
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "when-the-environment-can-no-longer-support-the-goal",
+    "title": "When the Environment Can No Longer Support the Goal",
+    "file": "cards/when-the-environment-can-no-longer-support-the-goal.webp",
+    "width": 499,
+    "height": 281,
+    "alt": "A person stands at an open arch looking from a library toward a distant mountain landscape.",
+    "focal_point": "50% 50%",
+    "concept": "A new environment may be necessary for growth.",
+    "review_status": "review card",
+    "source": "sources/the_teff_papers_library_of_ideas.png",
+    "source_crop": [
+      1126,
+      297,
+      1665,
+      579
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "the-system-did-exactly-what-it-believed-success-required",
+    "title": "The System Did Exactly What It Believed Success Required",
+    "file": "cards/the-system-did-exactly-what-it-believed-success-required.webp",
+    "width": 515,
+    "height": 290,
+    "alt": "A luminous brain-like network sits inside a transparent box with small surrounding signals.",
+    "focal_point": "50% 50%",
+    "concept": "The evaluation environment and its signals shape the system’s interpretation of success.",
+    "review_status": "review card",
+    "source": "sources/library_intelligence_human_ai_horizons.png",
+    "source_crop": [
+      7,
+      307,
+      550,
+      598
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "beyond-correctness",
+    "title": "Beyond Correctness",
+    "file": "cards/beyond-correctness.webp",
+    "width": 488,
+    "height": 275,
+    "alt": "A researcher examines a luminous balance and several floating images.",
+    "focal_point": "50% 50%",
+    "concept": "Evaluation involves weighing meaning and usefulness, not simply the result.",
+    "review_status": "review card",
+    "source": "sources/the_teff_papers_library_of_ideas.png",
+    "source_crop": [
+      1126,
+      7,
+      1665,
+      283
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "the-decisions-that-rarely-stay-small",
+    "title": "The Decisions That Rarely Stay Small",
+    "file": "cards/the-decisions-that-rarely-stay-small.webp",
+    "width": 544,
+    "height": 306,
+    "alt": "An illuminated winding route climbs toward a distant mountain summit.",
+    "focal_point": "50% 50%",
+    "concept": "Successive choices accumulate into a much longer journey.",
+    "review_status": "review card",
+    "source": "sources/library_intelligence_human_ai_horizons.png",
+    "source_crop": [
+      564,
+      612,
+      1108,
+      934
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "why-personal-ai-needs-memory",
+    "title": "Why Personal AI Needs Memory",
+    "file": "cards/why-personal-ai-needs-memory.webp",
+    "width": 542,
+    "height": 305,
+    "alt": "A translucent human-shaped profile holds several images of everyday memories.",
+    "focal_point": "50% 50%",
+    "concept": "Continuity through remembered personal context.",
+    "review_status": "card",
+    "source": "sources/the_teff_papers_ai_and_human_insight.png",
+    "source_crop": [
+      7,
+      606,
+      550,
+      934
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "building-before-you-understand-is-expensive",
+    "title": "Building Before You Understand Is Expensive",
+    "file": "cards/building-before-you-understand-is-expensive.webp",
+    "width": 1536,
+    "height": 864,
+    "alt": "An open notebook of architectural plans overlooks a complex campus.",
+    "focal_point": "50% 50%",
+    "concept": "The drawings foreground the understanding that should precede construction.",
+    "review_status": "review card",
+    "source": "sources/coordinated_paper_illustration_batch.png",
+    "source_crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "small-systems-decide-big-outcomes",
+    "title": "Small Systems Decide Big Outcomes",
+    "file": "cards/small-systems-decide-big-outcomes.webp",
+    "width": 544,
+    "height": 306,
+    "alt": "A long curved line of small illuminated glass modules extends across a table.",
+    "focal_point": "50% 50%",
+    "concept": "Repeated small components shape a larger system.",
+    "review_status": "card",
+    "source": "sources/six_futuristic_library_research_scenes.png",
+    "source_crop": [
+      1121,
+      7,
+      1665,
+      462
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "why-approval-comes-before-automation",
+    "title": "Why Approval Comes Before Automation",
+    "file": "cards/why-approval-comes-before-automation.webp",
+    "width": 504,
+    "height": 284,
+    "alt": "A brass stamp sits beside illuminated panels showing a check symbol and forward arrows.",
+    "focal_point": "50% 50%",
+    "concept": "Approval as the deliberate checkpoint before execution.",
+    "review_status": "card",
+    "source": "sources/the_teff_papers_ai_and_human_insight.png",
+    "source_crop": [
+      1123,
+      7,
+      1665,
+      292
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "documentation-is-a-competitive-advantage",
+    "title": "Documentation Is a Competitive Advantage",
+    "file": "cards/documentation-is-a-competitive-advantage.webp",
+    "width": 542,
+    "height": 305,
+    "alt": "Several illuminated image-bearing sheets stand organized inside an archive drawer.",
+    "focal_point": "50% 50%",
+    "concept": "Preserved records can be revisited and examined.",
+    "review_status": "card",
+    "source": "sources/library_intelligence_human_ai_horizons.png",
+    "source_crop": [
+      7,
+      612,
+      550,
+      934
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "why-human-judgement-still-matters-in-ai",
+    "title": "Why Human Judgement Still Matters in AI",
+    "file": "cards/why-human-judgement-still-matters-in-ai.webp",
+    "width": 506,
+    "height": 285,
+    "alt": "A brass balance weighs a blue brain-like network against a stack of books.",
+    "focal_point": "50% 50%",
+    "concept": "Human knowledge and judgement remain part of evaluation.",
+    "review_status": "card",
+    "source": "sources/the_teff_papers_ai_and_human_insight.png",
+    "source_crop": [
+      1123,
+      306,
+      1665,
+      592
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "the-discipline-that-protects-freedom",
+    "title": "The Discipline That Protects Freedom",
+    "file": "cards/the-discipline-that-protects-freedom.webp",
+    "width": 542,
+    "height": 305,
+    "alt": "An illuminated hourglass stands beside books near a window at sunset.",
+    "focal_point": "50% 50%",
+    "concept": "Intentional use of time protects future agency.",
+    "review_status": "review card",
+    "source": "sources/library_intelligence_human_ai_horizons.png",
+    "source_crop": [
+      1122,
+      612,
+      1665,
+      934
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  },
+  {
+    "slug": "why-ai-needs-human-curiosity",
+    "title": "Why AI Needs Human Curiosity",
+    "file": "cards/why-ai-needs-human-curiosity.webp",
+    "width": 1671,
+    "height": 940,
+    "alt": "A person considers a luminous AI figure and a glowing globe across a table with open books.",
+    "focal_point": "50% 50%",
+    "concept": "The person supplies questions and chooses where to direct the inquiry.",
+    "review_status": "review card",
+    "source": "sources/dialogue_across_the_holographic_library.png",
+    "source_crop": [
+      0,
+      0,
+      1672,
+      941
+    ],
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated artwork in ChatGPT for The Teff Papers V2; source retained."
+  }
+]

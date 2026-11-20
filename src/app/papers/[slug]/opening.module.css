@@ -1,0 +1,66 @@
+.opening {
+  --shade: 82%;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  background: var(--tp-black);
+  color: var(--tp-ivory);
+}
+.opening > * { grid-area: 1 / 1; }
+.scene { position: absolute; inset: 0; }
+.light {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgb(9 15 17 / var(--shade)) 0 29%, rgb(9 15 17 / 65%) 45%, transparent 68%),
+    linear-gradient(to top, var(--tp-black), transparent 10%);
+}
+.opening[data-backdrop-tone="panorama"] { --shade: 53%; }
+.frame {
+  position: relative;
+  width: min(var(--tp-content-width), calc(100% - 2 * var(--tp-gutter)));
+  margin-inline: auto;
+  padding-block: clamp(1.6rem, 4vw, 4rem);
+  min-height: clamp(28rem, 39vw, 45rem);
+  align-content: center;
+  pointer-events: none;
+}
+.frame :is(a, button) { pointer-events: auto; }
+.copy { max-width: min(43%, 41rem); pointer-events: auto; }
+.copy h1 {
+  font: 400 clamp(2.6rem, 4.65vw, 5.5rem)/1.01 var(--tp-display);
+  letter-spacing: -.034em;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+  margin: 0 0 1rem;
+}
+.opening[data-collection="Systems Thinking"] h1 { font-family: Georgia, serif; font-weight: 600; }
+.opening[data-collection="The Future Is Personal"] h1,
+.opening[data-collection="Sunday Reflections"] h1 { font-style: italic; }
+.opening[data-room] .frame { align-self: end; min-height: 0; }
+.opening[data-room] .copy { max-width: min(34%, 36rem); }
+.opening[data-room] h1 { font-size: clamp(2.35rem, 3.8vw, 4.65rem); }
+.opening[data-room] .light {
+  background: radial-gradient(ellipse 49% 85% at 4% 84%, #0a1016 8%, rgb(10 16 22 / 84%) 54%, transparent),
+    linear-gradient(90deg, rgb(10 16 22 / 30%) 25%, transparent 46%),
+    linear-gradient(to top, var(--tp-black), transparent 10%);
+}
+@media (max-width: 55rem) {
+  .opening { display: block; }
+  .scene { position: relative; aspect-ratio: 16 / 9; mask-image: linear-gradient(black 89%, transparent); }
+  .light { display: none; }
+  .frame { min-height: 0; padding-block: .4rem 1.6rem; }
+  .frame a { margin-bottom: .45rem; }
+  .copy, .opening[data-room] .copy { max-width: 42rem; }
+  .copy h1, .opening[data-room] h1 { font-size: clamp(2.35rem, 8vw, 3.85rem); }
+  .opening[data-backdrop-tone="panorama"] img { object-position: 95% 50%; }
+}
+
+/* Long research decks need the full room depth before they can share its foreground. */
+@media (55rem < width <= 69rem) {
+  .opening[data-room] { display: block; }
+  .opening[data-room] .light { display: none; }
+  .opening[data-room] .frame { padding-block: .5rem 2rem; }
+  .opening[data-room] .copy { max-width: 45rem; }
+}

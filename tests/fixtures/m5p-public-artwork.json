@@ -1,0 +1,248 @@
+[
+  {
+    "file": "public/artwork/m5-p/intelligence-depends-on-knowing-where-you-are-reading.webp",
+    "width": 1600,
+    "height": 900,
+    "sha256": "5f7982b7fb7e6bbf36e0813d8cfd6efa051f1b0bb8fee3fa429424c2e9f4af50"
+  },
+  {
+    "file": "public/artwork/m5-p/intelligence-depends-on-knowing-where-you-are-card.webp",
+    "width": 1200,
+    "height": 675,
+    "sha256": "331ed1e023f35ff44bca376d2199672f2057ca1ba64a737902ce3fc679cd7b37"
+  },
+  {
+    "file": "public/artwork/m5-p/intelligence-depends-on-knowing-where-you-are-social.webp",
+    "width": 1200,
+    "height": 630,
+    "sha256": "bdf8ed4f682e1513400e5ac9e8b4bbf5a5a29eec9e9ec492c4f57e5b1b71d57c"
+  },
+  {
+    "file": "public/artwork/m5-p/now-is-not-the-time-to-prove-intelligence-reading.webp",
+    "width": 1600,
+    "height": 900,
+    "sha256": "0c6ed54c1577d1980f078e20472f8149c3a00dae0a6a3382408b489416d31802"
+  },
+  {
+    "file": "public/artwork/m5-p/now-is-not-the-time-to-prove-intelligence-card.webp",
+    "width": 1200,
+    "height": 675,
+    "sha256": "c2318c3b6abbee65f14a1ce7294ce07d6a0fcd6ec06983f7ee0898d3c2f0af01"
+  },
+  {
+    "file": "public/artwork/m5-p/now-is-not-the-time-to-prove-intelligence-social.webp",
+    "width": 1200,
+    "height": 630,
+    "sha256": "39e63ec9605f4d7c95b600dfa0efb9cd1564beeb289054515bd5893a5a266a61"
+  },
+  {
+    "file": "public/artwork/m5-p/the-frontier-and-the-rest-of-us-reading.webp",
+    "width": 1600,
+    "height": 900,
+    "sha256": "f5dd4094b72074a530a640bf7e88ee3b2d85e14d5209a40957dd386258c6e227"
+  },
+  {
+    "file": "public/artwork/m5-p/the-frontier-and-the-rest-of-us-card.webp",
+    "width": 1200,
+    "height": 675,
+    "sha256": "b91d334b458d97f672d7cdeec17f48c11181371c8a604ddcd147f4538cb93c27"
+  },
+  {
+    "file": "public/artwork/m5-p/the-frontier-and-the-rest-of-us-social.webp",
+    "width": 1200,
+    "height": 630,
+    "sha256": "922835c12364e7183dfefccf2b47b38b997b004368f83591c28753149b7b6691"
+  },
+  {
+    "file": "public/artwork/m5-p/the-singularity-may-become-personal-before-it-becomes-strange-reading.webp",
+    "width": 1600,
+    "height": 900,
+    "sha256": "1791eef1900a22e57e9641a78134e491418f3400f8de2831a7a3798101bef726"
+  },
+  {
+    "file": "public/artwork/m5-p/the-singularity-may-become-personal-before-it-becomes-strange-card.webp",
+    "width": 1200,
+    "height": 675,
+    "sha256": "d9e9a90ffd6ab188abf043a889a13b7b0c36b70f5248ef5c3e64b03d6cfae7b6"
+  },
+  {
+    "file": "public/artwork/m5-p/the-singularity-may-become-personal-before-it-becomes-strange-social.webp",
+    "width": 1200,
+    "height": 630,
+    "sha256": "b0b2d541c3efacc4ae4730343511e8f96b9530ecef94df5e2d72bc80d8dc3a1a"
+  },
+  {
+    "file": "public/artwork/m5-p/we-resist-the-future-until-it-becomes-familiar-reading.webp",
+    "width": 1600,
+    "height": 900,
+    "sha256": "875f975ffd7d5c7d57005f6ae07ffdbbfaee0e3e3230443cefecef36e1cd5b5a"
+  },
+  {
+    "file": "public/artwork/m5-p/we-resist-the-future-until-it-becomes-familiar-card.webp",
+    "width": 1200,
+    "height": 675,
+    "sha256": "50bc17a22cfd739fb19c22ddf68440526a15166281a9b73c3e2fc016e646cd78"
+  },
+  {
+    "file": "public/artwork/m5-p/we-resist-the-future-until-it-becomes-familiar-social.webp",
+    "width": 1200,
+    "height": 630,
+    "sha256": "4a24427a6cf55d06d5d441b3c7a17897b2fcbd93ce7e90b179f4f54fae6acc70"
+  },
+  {
+    "file": "public/artwork/m5-p/what-becomes-scarce-when-intelligence-becomes-abundant-reading.webp",
+    "width": 1600,
+    "height": 900,
+    "sha256": "f0e0cc0407aa6318693bccb068d2a338d7554efe1e645817ef649af4f11fbdf2"
+  },
+  {
+    "file": "public/artwork/m5-p/what-becomes-scarce-when-intelligence-becomes-abundant-card.webp",
+    "width": 1200,
+    "height": 675,
+    "sha256": "325a925d85f3c41d91bd5492f725dc404cf7fc52262fb0d5734fd218831eba81"
+  },
+  {
+    "file": "public/artwork/m5-p/what-becomes-scarce-when-intelligence-becomes-abundant-social.webp",
+    "width": 1200,
+    "height": 630,
+    "sha256": "32aac3e1b1cbc61ab4889ef95472be76a03d2c82346133589512e34b0a01be1e"
+  },
+  {
+    "file": "public/artwork/m5-p/why-approval-comes-before-automation-reading.webp",
+    "width": 1600,
+    "height": 900,
+    "sha256": "1b20667825c037a0eb1a8d582d4398e83a588a26edc6b11f5a4a0f7150c229e2"
+  },
+  {
+    "file": "public/artwork/m5-p/why-approval-comes-before-automation-card.webp",
+    "width": 1200,
+    "height": 675,
+    "sha256": "bd19b84bd7b86551336c5d46afa985a6b5d6accb310b7636fc034d89fc448976"
+  },
+  {
+    "file": "public/artwork/m5-p/why-approval-comes-before-automation-social.webp",
+    "width": 1200,
+    "height": 630,
+    "sha256": "25953410a111e49c59f20b859d4f037cf13d91e91c04bdfee083d093b6fa49d1"
+  },
+  {
+    "file": "public/artwork/m5-p/why-human-judgement-still-matters-in-ai-reading.webp",
+    "width": 1600,
+    "height": 900,
+    "sha256": "7adaccebc8d555ca3e860c1bb0959c6ac105434e153d9b1f355d7f7c48e53b9b"
+  },
+  {
+    "file": "public/artwork/m5-p/why-human-judgement-still-matters-in-ai-card.webp",
+    "width": 1200,
+    "height": 675,
+    "sha256": "d4a7c075b074005afd736584cf0d2e2421311bd0cf4703db1f2d90ee4063cd55"
+  },
+  {
+    "file": "public/artwork/m5-p/why-human-judgement-still-matters-in-ai-social.webp",
+    "width": 1200,
+    "height": 630,
+    "sha256": "836692004f27dc5887e428d40c1c8388724aabf93773ab1ed79371f13bfec595"
+  },
+  {
+    "file": "public/artwork/m5-p/why-personal-ai-needs-memory-reading.webp",
+    "width": 1600,
+    "height": 900,
+    "sha256": "2873a3cf9f2d8882d4fd12965eff376481cb89a65f06e8a22bda0cf696cb974d"
+  },
+  {
+    "file": "public/artwork/m5-p/why-personal-ai-needs-memory-card.webp",
+    "width": 1200,
+    "height": 675,
+    "sha256": "90226556675f685fd2b990feab6138b3f2deee137c11c4b5cf56532439723775"
+  },
+  {
+    "file": "public/artwork/m5-p/why-personal-ai-needs-memory-social.webp",
+    "width": 1200,
+    "height": 630,
+    "sha256": "81ce1ee150f0fb6ac0ca7d7bb709af503e0ff4126e292f6263d4837b342f53d9"
+  },
+  {
+    "file": "public/artwork/panoramas/approval-mobile.webp",
+    "width": 960,
+    "height": 540,
+    "sha256": "51fe0780bbb8450bff74223646c214b4227083921539b17cc83ad7efff42fe98"
+  },
+  {
+    "file": "public/artwork/panoramas/approval.webp",
+    "width": 1920,
+    "height": 640,
+    "sha256": "6d6de23fc84ad7f5af846a459fd81ca37c21191e5fd1943f56d5c2ffb5f385e8"
+  },
+  {
+    "file": "public/artwork/panoramas/frontier-mobile.webp",
+    "width": 960,
+    "height": 540,
+    "sha256": "bd9f716927e20270287166e1a40c02322c82cb020c7b163d84bd2edd7770e01e"
+  },
+  {
+    "file": "public/artwork/panoramas/frontier.webp",
+    "width": 1920,
+    "height": 640,
+    "sha256": "88f51f7c318d6e876bb320b4be2b8646aa2defdcbe86b89487ef745651f3a823"
+  },
+  {
+    "file": "public/artwork/panoramas/judgement-mobile.webp",
+    "width": 960,
+    "height": 540,
+    "sha256": "69081e187271303b4113cc6a03502ae6d7221607be08ada76c180371dc3dcc90"
+  },
+  {
+    "file": "public/artwork/panoramas/judgement.webp",
+    "width": 1920,
+    "height": 640,
+    "sha256": "07d64637dffe923340a1cf259ac1ebe816d236121c1b3a65af7ab1d593a8f940"
+  },
+  {
+    "file": "public/artwork/panoramas/selection-mobile.webp",
+    "width": 960,
+    "height": 540,
+    "sha256": "080626d401660078a745d075fc4f491cd16eaa255f84eb70942ef3075b4e1ddd"
+  },
+  {
+    "file": "public/artwork/panoramas/selection.webp",
+    "width": 1920,
+    "height": 640,
+    "sha256": "98f26a2e1428e71e524d95592890e62700d5db97d5a4084d52fdbb27ffa0a219"
+  },
+  {
+    "file": "public/artwork/panoramas/singularity-card.webp",
+    "width": 1200,
+    "height": 675,
+    "sha256": "550b62b07039720aa41e5ef9f92e17afc5ec4f439cc9009d25c465cf7f67098d"
+  },
+  {
+    "file": "public/artwork/panoramas/singularity-mobile.webp",
+    "width": 960,
+    "height": 540,
+    "sha256": "28d61a91ea223972fef4f289acda161d6c1ed5ca5c1cc4f77757f532bec7ba88"
+  },
+  {
+    "file": "public/artwork/panoramas/singularity-social.webp",
+    "width": 1200,
+    "height": 630,
+    "sha256": "dc5e163507bb9a6978c6615142a100369f2a93b14898464a72854a88d2af5d54"
+  },
+  {
+    "file": "public/artwork/panoramas/singularity.webp",
+    "width": 1920,
+    "height": 640,
+    "sha256": "c515fd4d8f52715747ce5df6d99d512cfe6df4ebf4e4ab48909defb736cc4fcc"
+  },
+  {
+    "file": "public/artwork/panoramas/small-systems-mobile.webp",
+    "width": 960,
+    "height": 540,
+    "sha256": "59d436e690fb7e3731331fd6440d6b4827538618437aa309358cb9e77d874960"
+  },
+  {
+    "file": "public/artwork/panoramas/small-systems.webp",
+    "width": 1920,
+    "height": 640,
+    "sha256": "4c2c20c0d83beb07f6849cae92619732317b2970a6ef883d03c8df8b3992909b"
+  }
+]

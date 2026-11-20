@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { PageContainer } from "@/components/layout/PageContainer";
+import Image from "next/image";
+import { MotionScope, MotionToggle } from "@/components/foundation/MotionScope";
+import manuscript from "./manuscript.module.css";
+import styles from "../editorial.module.css";
 export const metadata: Metadata = { title: "Manifesto", description: "The public declaration behind The Teff Papers." };
 const paragraphs = [
   "Meaningful ideas rarely arrive as arguments ready to publish. They begin as a tension inside a project, a decision that refuses to become simple, a mistake that exposes an assumption, or a question that returns after the immediate work has moved on. Left in memory, those beginnings are easy to smooth over. Written down, they become easier to examine because the gaps, contradictions and connections can no longer hide inside familiarity. The idea starts to show not only what it says, but what it may be becoming.",
@@ -14,4 +17,36 @@ const paragraphs = [
   "Growth also requires leaving earlier thinking visible. An archive becomes less honest when every old idea is rewritten to resemble the person looking back at it. Some papers will age well, some will need qualification and some may reveal assumptions I no longer hold. They should remain part of the record because development is easier to understand when its earlier stages have not been erased. New papers can correct, extend or disagree with older ones, allowing the change itself to become documented rather than presenting certainty as though it existed from the beginning.",
   "Over the years, readers should be able to expect careful reasoning, connected prose and ideas grounded in the realities of working, learning and building. They should also expect the subjects to expand as new questions appear and existing ones become more demanding. I cannot know which paper will lead to a product, which observation will become research or which question will remain unresolved for a long time. The useful commitment is smaller and more durable: to notice what deserves examination, document it with honesty and keep following the idea until its meaning becomes clearer."
 ];
-export default function ManifestoPage() { return <PageContainer narrow className="paper-page"><article><header className="paper-header"><p className="eyebrow">Manifesto · Version 2.0</p><h1>The Teff Papers</h1><p className="paper-deck">Ideas should be documented before they become products.</p></header><div className="prose manifesto">{paragraphs.map((text, index) => <p key={`${index}-${text}`}>{text}</p>)}</div><footer className="paper-signature"><p>— Teff</p></footer></article></PageContainer>; }
+export default function ManifestoPage() {
+  return (
+    <article>
+      <MotionScope>
+        <header className={manuscript.opening} data-motion-scene>
+          <div className={manuscript.scene}>
+            <picture>
+              <source media="(max-width: 42rem)" srcSet="/artwork/manifesto-founding/desk-mobile.webp" />
+              <source media="(max-width: 68rem)" srcSet="/artwork/manifesto-founding/chamber-tablet.webp" />
+              <Image src="/artwork/manifesto-founding/chamber.webp" width={1920} height={803} unoptimized loading="eager" fetchPriority="high" alt="Sunlight crosses a handwritten architectural study, loose sketches and a small wooden arch on a library desk." />
+            </picture>
+            <span className={manuscript.dust} data-ambient aria-hidden="true" />
+          </div>
+          <div className={manuscript.frame}>
+            <div className={manuscript.copy}>
+              <h1>The Teff Papers</h1>
+              <p className={styles.paperDeck}>Ideas should be documented before they become products.</p>
+              <MotionToggle />
+            </div>
+          </div>
+        </header>
+      </MotionScope>
+      <div className={styles.frame}>
+        <div className={styles.readingSolo}>
+          <div className={"prose manifesto " + styles.readingBody}>
+            {paragraphs.map((text) => <p key={text}>{text}</p>)}
+          </div>
+          <footer className="paper-signature"><p>— Teff</p></footer>
+        </div>
+      </div>
+    </article>
+  );
+}

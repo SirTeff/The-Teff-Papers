@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { PageContainer } from "@/components/layout/PageContainer";
+import { EditorialPage } from "@/components/foundation/EditorialPage";
+import styles from "@/components/foundation/editorial-page.module.css";
 
 export const metadata: Metadata = { title: "Projects", description: "Fred+Teff and Fred Studio: practical expressions of the thinking behind The Teff Papers." };
 
 export default function ProjectsPage() {
-  return <PageContainer className="page-shell"><header className="page-intro"><p className="eyebrow">Ideas into practice</p><h1>Projects</h1><p>The Teff Papers explains why. Fred+Teff demonstrates what. Fred Studio develops how.</p></header><div className="project-grid project-grid--content">
+  return <EditorialPage title="Projects" eyebrow="Ideas into practice" lead="The Teff Papers explains why. Fred+Teff demonstrates what. Fred Studio develops how." wide><div className={styles.projects}>
     <article className="project-card"><div className="project-topline"><span>Early build / personal AI assistant project</span><span>Personal Digital Intelligence</span></div><h2>Fred+Teff</h2><p className="project-lead">Fred+Teff is a personal AI command center built around one idea: a useful personal AI should not only respond to prompts. It should understand context, help organise thinking, prepare useful output, and support action without taking control away from the user.</p><div className="project-copy">
       <p>Fred+Teff is one practical expression of the thinking behind The Teff Papers.</p>
       <p>The project began from a simple question: what should a personal AI actually feel like if it was built around a real person&apos;s life, work, ideas, learning, and future plans?</p>
@@ -28,5 +29,5 @@ export default function ProjectsPage() {
       <p>The Teff Papers will preserve the thinking behind it. Fred+Teff will test some of the ideas personally. Fred Studio may later turn those ideas into broader products, systems, and tools.</p>
       <p>The work begins with documentation.</p><p>Then it becomes design.</p><p>Then it becomes build.</p>
     </div><p className="project-note">Fred Studio grows from the same foundation: Document first. Build second. Publish with structure from day one.</p></article>
-  </div></PageContainer>;
+  </div></EditorialPage>;
 }

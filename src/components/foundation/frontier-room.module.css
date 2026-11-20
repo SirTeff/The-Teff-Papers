@@ -1,0 +1,44 @@
+.room {
+  position: relative;
+  min-width: 0;
+  align-self: start;
+  aspect-ratio: 16 / 9;
+}
+
+.room .artwork,
+.effects {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.room .artwork { aspect-ratio: auto; }
+.room .artwork::after { display: none; }
+.effects { pointer-events: none; }
+
+.replay {
+  z-index: 1;
+  position: absolute;
+  right: .65rem;
+  bottom: .65rem;
+  min-height: 44px;
+  width: 44px; height: 44px; display: grid; place-items: center; padding: 0;
+  border: 1px solid rgb(218 183 129 / 68%);
+  border-radius: 50%;
+  background: #0b121a;
+  color: #fff6e6;
+  font-size: .78rem;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.replay[data-replay-ready] { visibility: visible; }
+.replay:not(:disabled):hover { background: #1a2b3a; }
+.replay:disabled { opacity: .65; cursor: default; }
+.replay:focus-visible { outline: 2px solid #9adfff; outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .effects, .replay { display: none; }
+}

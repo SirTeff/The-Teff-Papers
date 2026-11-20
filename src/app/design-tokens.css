@@ -1,0 +1,28 @@
+:root {
+  --tp-black: #080907;
+  --tp-charcoal: #191b1c;
+  --tp-ivory: #f2efe6;
+  --tp-amber: #c3ad73;
+  --tp-blue: #8eafc5;
+  --tp-muted: #b7b8b4;
+  --tp-panel: #111719;
+  --tp-border: rgb(242 239 230 / 16%);
+  --tp-border-active: rgb(195 173 115 / 65%);
+  --tp-display: "Iowan Old Style", Baskerville, "Times New Roman", serif;
+  --tp-reading: Georgia, "Times New Roman", serif;
+  --tp-interface: "Segoe UI", Arial, sans-serif;
+  --tp-title-size: clamp(2.9rem, 6.6vw + .5rem, 7rem);
+  --tp-section-size: clamp(2.25rem, 3.8vw + .4rem, 4rem);
+  --tp-reading-size: clamp(1.0625rem, .85vw + .9rem, 1.1875rem);
+  --tp-reading-leading: 1.75;
+  --tp-measure: 68ch;
+  --tp-gutter: clamp(1rem, 4vw, 3.5rem);
+  --tp-content-width: 78rem;
+  --tp-section-space: clamp(3.5rem, 8vw, 7rem);
+  --tp-card-gap: clamp(.875rem, 2vw, 1.5rem);
+  --tp-radius: .875rem;
+  --tp-fast: 160ms;
+  --tp-interaction: 220ms;
+  --tp-ease: cubic-bezier(.2, .65, .3, 1);
+  --tp-light-sweep: 22s;
+}

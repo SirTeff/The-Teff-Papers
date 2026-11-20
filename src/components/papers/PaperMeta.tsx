@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { formatDate, getCategorySlug, type Paper } from "@/lib/papers";
 
-export function PaperMeta({ paper }: { paper: Paper }) {
+export function PaperMeta({ paper }: { paper: Pick<Paper, "category" | "date" | "readingTime"> }) {
   return (
     <div className="paper-meta" aria-label="Paper details">
       <Link href={`/categories/${getCategorySlug(paper.category)}`}>{paper.category}</Link>

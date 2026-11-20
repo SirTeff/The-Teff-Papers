@@ -1,32 +1,21 @@
 import Link from "next/link";
-import type { Paper } from "@/lib/papers";
-import { PaperMeta } from "./PaperMeta";
+import type { getPaperConnections } from "@/lib/research";
+import styles from "@/app/research.module.css";
 
-export function RelatedPapers({ papers }: { papers: Paper[] }) {
-  if (!papers.length) return null;
+export function RelatedPapers({ connections }: { connections: ReturnType<typeof getPaperConnections> }) {
+  if (!connections.length) return null;
   return (
-    <section className="paper-discovery" aria-labelledby="paper-discovery-heading">
-      <header className="paper-discovery-heading">
-        <p className="eyebrow">Continue exploring</p>
-        <h2 id="paper-discovery-heading">Follow the next line of thought.</h2>
-      </header>
-      <div className="paper-discovery-grid">
-        {papers.map((paper) => (
-          <article className="paper-discovery-card" key={paper.slug}>
-            <PaperMeta paper={paper} />
-            <h3>
-              <Link href={`/papers/${paper.slug}`}>{paper.title}</Link>
-            </h3>
-            <Link
-              className="paper-discovery-link"
-              href={`/papers/${paper.slug}`}
-              aria-label={`Read ${paper.title}`}
-            >
-              Read paper <span aria-hidden="true">→</span>
-            </Link>
-          </article>
+    <section className={styles.connections} aria-labelledby="paper-discovery-heading">
+      <h2 id="paper-discovery-heading">Continue the exploration</h2>
+      <ul className={styles.connectionList} role="list">
+        {connections.map(({ paper, explanation, label }) => (
+          <li key={paper.slug}>
+            <p className={styles.eyebrow}>{label}<span>{paper.category}</span></p>
+            <h3><Link href={`/papers/${paper.slug}`}>{paper.title}</Link></h3>
+            <p>{explanation}</p>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

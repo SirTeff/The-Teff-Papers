@@ -2,7 +2,7 @@
 title: "The Decisions That Rarely Stay Small"
 slug: "the-decisions-that-rarely-stay-small"
 date: "2026-07-19"
-category: "Sunday Reflection"
+category: "Sunday Reflections"
 tags:
   - "Human Behaviour"
   - "Leadership"

@@ -7,6 +7,9 @@ assertMarginEnvironmentReady(process.env);
 const nextConfig: NextConfig = {
   outputFileTracingRoot: path.resolve(process.cwd()),
   poweredByHeader: false,
+  async redirects() {
+    return [{ source: "/categories/sunday-reflection", destination: "/categories/sunday-reflections", permanent: true }];
+  },
   async headers() {
     return [
       {

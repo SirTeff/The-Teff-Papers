@@ -1,0 +1,88 @@
+.room {
+  position: relative;
+  isolation: isolate;
+  background: #17120f;
+}
+.environment {
+  --portrait-focus: 74% 34%;
+  --portrait-feather: 29% 46%;
+  --scene-softness: .85px;
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  margin-bottom: -100svh;
+  overflow: clip;
+  z-index: -1;
+  pointer-events: none;
+}
+.environment::before,
+.environment::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.environment::before {
+  z-index: 1;
+  backdrop-filter: blur(2.2px) saturate(.61);
+  mask-image: radial-gradient(ellipse var(--portrait-feather) at var(--portrait-focus), #000 24%, rgb(0 0 0 / 75%) 58%, transparent);
+}
+.environment::after {
+  z-index: 2;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.48 .76' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Cpath d='M0 0h160v160H0z' filter='url(%23grain)' opacity='.09'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse var(--portrait-feather) at var(--portrait-focus), rgb(27 19 14 / 27%), rgb(23 17 13 / 35%) 62%, transparent),
+    linear-gradient(180deg, rgb(22 15 12 / 12%), transparent 26%, rgb(17 12 11 / 48%) 78%, rgb(17 12 11 / 70%)),
+    radial-gradient(ellipse 80% 76% at 68% 31%, transparent 40%, rgb(19 13 11 / 37%));
+}
+.environment picture, .environment img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.environment img {
+  object-fit: cover;
+  object-position: 69% 34%;
+  filter: blur(var(--scene-softness)) saturate(.77) sepia(.17) brightness(.84);
+  transform: scale(1.012);
+}
+.story {
+  padding: clamp(3.5rem, 7vw, 8rem) var(--tp-gutter) 5rem max(var(--tp-gutter), 7vw);
+  background: linear-gradient(90deg, rgb(17 13 11 / 84%), rgb(17 13 11 / 75%) 39%, transparent 65%);
+}
+.column { width: min(43vw, 39rem); }
+.heading h1 {
+  font: 400 clamp(4.6rem, 7vw, 8rem)/.98 var(--tp-display);
+  color: #fff1d8;
+  letter-spacing: -.055em;
+  margin: 0 0 1.75rem;
+}
+.column article { color: #fcf3e5; }
+.column article p { color: inherit; }
+.column section:first-child > p:first-child {
+  color: #fff1d8;
+  font: italic 400 clamp(1.35rem, 2vw, 2rem)/1.38 var(--tp-reading);
+}
+.column footer { margin-top: 2.5rem; }
+@media (max-width: 65rem) {
+  .environment {
+    --portrait-focus: 62% 32%;
+    --portrait-feather: 38% 44%;
+  }
+  .environment img { object-position: 61% top; }
+  .story {
+    --opening: min(53svh, 37rem);
+    padding: var(--opening) var(--tp-gutter) 4rem;
+    background: linear-gradient(to bottom, transparent calc(var(--opening) - 8rem), rgb(15 12 10 / 83%) var(--opening), rgb(15 12 10 / 78%) calc(var(--opening) + 15rem));
+  }
+  .column { width: min(100%, 41rem); margin-inline: auto; }
+  .heading h1 { font-size: clamp(3.9rem, 10vw, 6.3rem); margin-bottom: 1.3rem; }
+}
+@media (max-width: 40rem) {
+  .environment {
+    --portrait-focus: 53% 31%;
+    --portrait-feather: 64% 43%;
+    --scene-softness: 1.1px;
+  }
+  .environment img { object-position: 55% top; }
+  .story { --opening: clamp(15rem, 50svh, 29rem); }
+}

@@ -2,7 +2,7 @@
 title: "When the Environment Can No Longer Support the Goal"
 slug: "when-the-environment-can-no-longer-support-the-goal"
 date: "2026-07-26"
-category: "Sunday Reflection"
+category: "Sunday Reflections"
 tags:
   - "Environment"
   - "Growth"
