@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/shared/ArrowIcon";
 import Link from "next/link";
 import { getPaperBySlug } from "@/lib/papers";
 import { getMarginEntry, getMarginHistory } from "@/lib/margin/admin-repository";
@@ -18,7 +19,7 @@ export default async function StudioMarginEntryPage({ params, searchParams }: { 
 
   return (
     <div className="studio-page studio-detail">
-      <Link href={`/studio/margin?status=${entry.status}`} className="studio-back-link">← Back to {entry.status}</Link>
+      <Link href={`/studio/margin?status=${entry.status}`} className="studio-back-link"><ArrowIcon direction="left" /> Back to {entry.status}</Link>
       <div className="studio-title-row"><div><p className="eyebrow">Margin contribution</p><h1>{entry.displayName || "Anonymous reader"}</h1><p>{paper?.title ?? `Paper unavailable (${entry.targetKey})`}</p></div></div>
       {error && errorMessages[error] && <p className="studio-alert" role="alert">{errorMessages[error]}</p>}
       <section className="studio-detail-card" aria-labelledby="contribution-title">

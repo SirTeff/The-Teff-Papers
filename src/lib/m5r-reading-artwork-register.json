@@ -1,0 +1,362 @@
+[
+  {
+    "title": "Beyond Correctness",
+    "slug": "beyond-correctness",
+    "alt": "A person considers a checkmark and geometric instruments on one side and a group in conversation under a tree on the other.",
+    "focal_point": "53% 50%",
+    "concept": "Correctness is one dimension of usefulness; human intention and context also matter.",
+    "status": "full-resolution candidate; integration and editorial review pending",
+    "review_note": "Brighter paper-textured treatment: check title and deck contrast in the reading opening.",
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated illustration created in ChatGPT for The Teff Papers V2, M5-R, 19 November 2026. Not a photograph of a real event.",
+    "master": {
+      "file": "masters/beyond-correctness.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "0b5f6f28f14d7a208f60d98d8e3f7900779ee2ec57f84fbb655c33dcdd6bb9d2"
+    },
+    "variants": {
+      "reading": {
+        "file": "artwork/beyond-correctness.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 303218,
+        "sha256": "2f7d9b8e2c26f368b2dcbafcd7e4d9c68e971699dc7c11efed1fdfe41ce57ecc"
+      },
+      "card": {
+        "file": "artwork/beyond-correctness-card.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 156114,
+        "sha256": "c3d59c947b3681d2d4bc4b87616c6ba1976de308efb6d39188ec142cde3e5a03"
+      },
+      "social": {
+        "file": "artwork/beyond-correctness-social.webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 170392,
+        "sha256": "f279a2e79b0f4e96137ff1e0a64bd5bedea5b99ba06c7c78d62f77d649ccfc42"
+      }
+    }
+  },
+  {
+    "title": "Why Approval Comes Before Automation",
+    "slug": "why-approval-comes-before-automation",
+    "alt": "A person at a desk looks toward a checkmark on the first of several panels before a luminous path reaches an open doorway.",
+    "focal_point": "54% 52%",
+    "concept": "A human review and approval checkpoint comes before a sequence of consequential actions.",
+    "status": "full-resolution candidate; integration and editorial review pending",
+    "review_note": "Editorial review: the checkmark represents approval metaphorically; the scene does not show a literal interlock.",
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated illustration created in ChatGPT for The Teff Papers V2, M5-R, 19 November 2026. Not a photograph of a real event.",
+    "master": {
+      "file": "masters/why-approval-comes-before-automation.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e2ae47e7f097c1af136364b1e3fe553753eec8420bf261e77813565d7a0f4b93"
+    },
+    "variants": {
+      "reading": {
+        "file": "artwork/why-approval-comes-before-automation.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 151022,
+        "sha256": "6b25c02360a599001e505d14654f202e26fa93c46b0ed0e0ef8101e10fa0256b"
+      },
+      "card": {
+        "file": "artwork/why-approval-comes-before-automation-card.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 89824,
+        "sha256": "c6f298db53633c25da95668898bee853d34c24ce67a44746950bc747f53473c6"
+      },
+      "social": {
+        "file": "artwork/why-approval-comes-before-automation-social.webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 96732,
+        "sha256": "ce1f20dca8965b8b59de4cab18c7c01ed19a175c8f3e7c47366a60e5b14fbe59"
+      }
+    }
+  },
+  {
+    "title": "Why Human Judgement Still Matters in AI",
+    "slug": "why-human-judgement-still-matters-in-ai",
+    "alt": "A person studies several translucent panels showing different patterns and landscapes above a glowing sphere.",
+    "focal_point": "51% 49%",
+    "concept": "Human assessment interprets and weighs multiple forms of evidence rather than merely accepting an output.",
+    "status": "full-resolution candidate; integration and editorial review pending",
+    "review_note": "Editorial review: the comparison of outputs is conceptual; the scene does not explicitly identify them as model-generated.",
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated illustration created in ChatGPT for The Teff Papers V2, M5-R, 19 November 2026. Not a photograph of a real event.",
+    "master": {
+      "file": "masters/why-human-judgement-still-matters-in-ai.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "c28cb7cd04b6cd56b05dd09728867f09760f72ebc96728b7ab3d05dcdf18a4af"
+    },
+    "variants": {
+      "reading": {
+        "file": "artwork/why-human-judgement-still-matters-in-ai.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 146950,
+        "sha256": "38bc596d9757ddc415010432f21889bb9f46ad90b4dae0708819e1bd66df13c6"
+      },
+      "card": {
+        "file": "artwork/why-human-judgement-still-matters-in-ai-card.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 87292,
+        "sha256": "dbc6da72b20968625ac9418e5f836782c279eba31917b9223a98a80d534ab6ef"
+      },
+      "social": {
+        "file": "artwork/why-human-judgement-still-matters-in-ai-social.webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 94786,
+        "sha256": "da5df91b63907c3d14f932a6b28357768e57cb8cb99aa2846144b78df7e2e0d9"
+      }
+    }
+  },
+  {
+    "title": "Small Systems Decide Big Outcomes",
+    "slug": "small-systems-decide-big-outcomes",
+    "alt": "A small mechanism of interlocking gears sends illuminated paths toward a distant city and river.",
+    "focal_point": "48% 55%",
+    "concept": "Small recurring mechanisms can shape outcomes far beyond their immediate setting.",
+    "status": "full-resolution candidate; integration and editorial review pending",
+    "review_note": "Brighter paper-textured treatment: verify reading-opening contrast.",
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated illustration created in ChatGPT for The Teff Papers V2, M5-R, 19 November 2026. Not a photograph of a real event.",
+    "master": {
+      "file": "masters/small-systems-decide-big-outcomes.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "1154e0cf81b768a3170382b6e271629e0bf8c441df92c1e06e1cb3cc0c5393e0"
+    },
+    "variants": {
+      "reading": {
+        "file": "artwork/small-systems-decide-big-outcomes.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 223120,
+        "sha256": "826d84281c36e807661a77cd2b7ae6f09b176d688622e2771d25c4e16b925e62"
+      },
+      "card": {
+        "file": "artwork/small-systems-decide-big-outcomes-card.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 115054,
+        "sha256": "cc004d326fcc3f8b2ca3df66d8403283826634288b127933364ef2a9a311be7c"
+      },
+      "social": {
+        "file": "artwork/small-systems-decide-big-outcomes-social.webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 127712,
+        "sha256": "066148e9ed48cf09308d168fa0e1495e02b98b6164527805517bddde7dd53fc6"
+      }
+    }
+  },
+  {
+    "title": "The System Did Exactly What It Believed Success Required",
+    "slug": "the-system-did-exactly-what-it-believed-success-required",
+    "alt": "A researcher looks at a luminous AI decision sequence reaching a checkmark while the terrain beyond falls into a chasm.",
+    "focal_point": "55% 48%",
+    "concept": "The system optimizes a measurable goal while overlooking the wider consequences of its interpretation.",
+    "status": "full-resolution candidate; integration and editorial review pending",
+    "review_note": "",
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated illustration created in ChatGPT for The Teff Papers V2, M5-R, 19 November 2026. Not a photograph of a real event.",
+    "master": {
+      "file": "masters/the-system-did-exactly-what-it-believed-success-required.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "14d31636cbd0e3a3928a491a0e8d11b4bb3f597051ea5ab60a53319826410590"
+    },
+    "variants": {
+      "reading": {
+        "file": "artwork/the-system-did-exactly-what-it-believed-success-required.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 171202,
+        "sha256": "6085af41e90ceb3f818f404cd9fc8ead6ce64d25a88329c10a22b8136d4a51bf"
+      },
+      "card": {
+        "file": "artwork/the-system-did-exactly-what-it-believed-success-required-card.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 109078,
+        "sha256": "29180e4d51baa782537c526ae33bf52d95fd9cf5a5169c653ed918e61755f27e"
+      },
+      "social": {
+        "file": "artwork/the-system-did-exactly-what-it-believed-success-required-social.webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 116526,
+        "sha256": "701b348afe64d608505a49ca5ff3e896f645254f89d59c7ae70bd0d7be0ca88c"
+      }
+    }
+  },
+  {
+    "title": "Before the First Action",
+    "slug": "before-the-first-action",
+    "alt": "A hand hovers near the first brass domino in a branching sequence on a dark table.",
+    "focal_point": "54% 53%",
+    "concept": "An initial assumption shapes subsequent action.",
+    "status": "full-resolution candidate; integration and editorial review pending",
+    "review_note": "",
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated illustration created in ChatGPT for The Teff Papers V2, M5-R, 19 November 2026. Not a photograph of a real event.",
+    "master": {
+      "file": "masters/before-the-first-action.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "2ecfadaa451a8480a4bd123522c417fd50833e2f8d15d391bfbb223805f7d515"
+    },
+    "variants": {
+      "reading": {
+        "file": "artwork/before-the-first-action.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 148812,
+        "sha256": "9c48df66c069b92508fd3d411d69ffecd933d6d5cbd7d0c59fccb58c3c6f6761"
+      },
+      "card": {
+        "file": "artwork/before-the-first-action-card.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 94860,
+        "sha256": "54d08cf2f474d91014064299517ab7d40b1124aa066748bc7d0d213a2816607f"
+      },
+      "social": {
+        "file": "artwork/before-the-first-action-social.webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 102124,
+        "sha256": "be757f74a982fb21b122796eaaff9052faa0bba5aa8939a15774d78d42cc9b08"
+      }
+    }
+  },
+  {
+    "title": "The Decisions That Rarely Stay Small",
+    "slug": "the-decisions-that-rarely-stay-small",
+    "alt": "An observer watches rings expand outward from a small glowing sphere into scenes of communities, cities and a globe.",
+    "focal_point": "55% 52%",
+    "concept": "A seemingly small choice produces consequences across increasing scales.",
+    "status": "full-resolution candidate; integration and editorial review pending",
+    "review_note": "Brighter paper-textured treatment: verify reading-opening contrast.",
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated illustration created in ChatGPT for The Teff Papers V2, M5-R, 19 November 2026. Not a photograph of a real event.",
+    "master": {
+      "file": "masters/the-decisions-that-rarely-stay-small.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e4876a87c8dd49b8ae0a4e2a864f3d869a1b5c43785a9bee6a966201d1513353"
+    },
+    "variants": {
+      "reading": {
+        "file": "artwork/the-decisions-that-rarely-stay-small.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 223636,
+        "sha256": "3445f5d9f35d608f86cfe3b416f567829b986123c0bf931d103a2d75e09dfe2d"
+      },
+      "card": {
+        "file": "artwork/the-decisions-that-rarely-stay-small-card.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 123378,
+        "sha256": "7b97da1fe6083509514a761f74c73b8ed7441a92cb4292b0aa9dc90e61ac425b"
+      },
+      "social": {
+        "file": "artwork/the-decisions-that-rarely-stay-small-social.webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 135052,
+        "sha256": "cde77bbb9802f43f53af421e7afec58993708a23fb010e22551ea203a1cc79eb"
+      }
+    }
+  },
+  {
+    "title": "When the Environment Can No Longer Support the Goal",
+    "slug": "when-the-environment-can-no-longer-support-the-goal",
+    "alt": "A seated hiker studies a glowing route that breaks across a cracked plateau beside a green valley.",
+    "focal_point": "56% 52%",
+    "concept": "The conditions that support a goal can change, making a different environment necessary.",
+    "status": "full-resolution candidate; integration and editorial review pending",
+    "review_note": "",
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated illustration created in ChatGPT for The Teff Papers V2, M5-R, 19 November 2026. Not a photograph of a real event.",
+    "master": {
+      "file": "masters/when-the-environment-can-no-longer-support-the-goal.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "88401ea159bd9aa992a2733a2ca74def1ed38e4e1af83072074721e82712efbe"
+    },
+    "variants": {
+      "reading": {
+        "file": "artwork/when-the-environment-can-no-longer-support-the-goal.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 260754,
+        "sha256": "bfb6bc2869546f1cc1b77fac3da9fe1babd002333159d23f6f44e08f6c9b37e9"
+      },
+      "card": {
+        "file": "artwork/when-the-environment-can-no-longer-support-the-goal-card.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 161386,
+        "sha256": "34a83f46ae07f9661265abc8cc8723551d9d5b8a484517c595b9d3e52beaf2de"
+      },
+      "social": {
+        "file": "artwork/when-the-environment-can-no-longer-support-the-goal-social.webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 165988,
+        "sha256": "4c684fc1c8e39de311d89d390bfae102eb6b18781086fe7c60ee84609b8e9f4b"
+      }
+    }
+  },
+  {
+    "title": "Documentation Is a Competitive Advantage",
+    "slug": "documentation-is-a-competitive-advantage",
+    "alt": "A person studies connected branching diagrams above an open notebook and pen on a warmly lit desk.",
+    "focal_point": "53% 54%",
+    "concept": "Recorded decision paths and their reasoning can be examined and reused.",
+    "status": "full-resolution candidate; integration and editorial review pending",
+    "review_note": "Editorial review: the illustration emphasizes visible recorded reasoning rather than a physical archive.",
+    "credit": "The Teff Papers",
+    "provenance": "Original AI-generated illustration created in ChatGPT for The Teff Papers V2, M5-R, 19 November 2026. Not a photograph of a real event.",
+    "master": {
+      "file": "masters/documentation-is-a-competitive-advantage.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "320a03247c8b8f98f8d0fc7b9244e50bd8396633eaeabeb62dc6bf32257f82e2"
+    },
+    "variants": {
+      "reading": {
+        "file": "artwork/documentation-is-a-competitive-advantage.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 131032,
+        "sha256": "a2fd5c7517c4b18a0e120232f0476a720987fc5f0a947ca576d7d4966ffec8c2"
+      },
+      "card": {
+        "file": "artwork/documentation-is-a-competitive-advantage-card.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 82872,
+        "sha256": "fa59c0261b4b152d9c2c2fc568b3fa22cc4afa1540a0c2c00b43084fe111fc54"
+      },
+      "social": {
+        "file": "artwork/documentation-is-a-competitive-advantage-social.webp",
+        "width": 1200,
+        "height": 630,
+        "bytes": 87316,
+        "sha256": "fc8c74491e3169e4ed01a4d6ee1db1c8c34d1ebcaf731ff93c1e1389da3cfaef"
+      }
+    }
+  }
+]

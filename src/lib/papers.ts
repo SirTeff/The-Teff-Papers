@@ -3,6 +3,8 @@ import path from "node:path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import type { Nodes, Root } from "mdast";
+import type { GuidePoint } from "./paper-guides";
 
 export const categories = [
   "Sunday Reflections",
@@ -56,6 +58,10 @@ export type Paper = {
 
 const papersDirectory = path.join(process.cwd(), "src/content/papers");
 
+function canonicalCategory(category: string) {
+  return category === "Sunday Reflection" ? "Sunday Reflections" : category;
+}
+
 function parsePaperDate(date: string) {
   const timestamp = new Date(`${date}T00:00:00Z`).getTime();
   if (Number.isNaN(timestamp)) throw new Error(`Invalid paper publication date: ${date}`);
@@ -71,7 +77,7 @@ export function getAllPapers(): Paper[] {
     .map((file) => {
       const raw = fs.readFileSync(path.join(papersDirectory, file), "utf8");
       const { data, content } = matter(raw);
-      return { ...data, content } as Paper;
+      return { ...data, category: canonicalCategory(data.category), content } as Paper;
     })
     .filter((paper) => paper.status.toLowerCase() !== "hidden")
     .sort((a, b) => {
@@ -100,31 +106,37 @@ export function getCategoryBySlug(slug: string) {
 }
 
 export function getPapersByCategory(category: string) {
-  return getAllPapers().filter((paper) => paper.category === category);
+  return getAllPapers().filter((paper) => paper.category === canonicalCategory(category));
 }
 
-export function getRelatedPapers(paper: Paper, limit = 2) {
-  return getAllPapers()
-    .filter((candidate) => candidate.slug !== paper.slug)
-    .map((candidate) => ({
-      candidate,
-      sharedTags: candidate.tags.filter((tag) => paper.tags.includes(tag)).length,
-      sameCategory: candidate.category === paper.category,
-    }))
-    .filter(({ sameCategory, sharedTags }) => sameCategory || sharedTags > 0)
-    .sort((a, b) => {
-      if (a.sameCategory !== b.sameCategory) return a.sameCategory ? -1 : 1;
-      if (a.sharedTags !== b.sharedTags) return b.sharedTags - a.sharedTags;
-
-      const dateDifference = parsePaperDate(b.candidate.date) - parsePaperDate(a.candidate.date);
-      return dateDifference || a.candidate.title.localeCompare(b.candidate.title);
-    })
-    .slice(0, limit)
-    .map(({ candidate }) => candidate);
+export function getPaperCategoryCounts() {
+  const counts = new Map<string, number>();
+  for (const paper of getAllPapers()) counts.set(paper.category, (counts.get(paper.category) ?? 0) + 1);
+  return counts;
 }
 
-export async function renderMarkdown(content: string) {
-  const result = await remark().use(html).process(content);
+function proseText(node: Nodes): string {
+  if ("children" in node) return node.children.map(proseText).join("");
+  return node.type === "text" || node.type === "inlineCode" ? node.value : "";
+}
+
+export async function renderMarkdown(content: string, points: readonly GuidePoint[] = [], anchored = new Set<string>()) {
+  const result = await remark().use(function attachGuide() {
+    return (tree: Root) => {
+      if (!points.length) return;
+      const blocks = tree.children.filter((node) => node.type === "paragraph" || node.type === "heading")
+        .map((node) => ({ node, text: proseText(node).toLowerCase().replace(/\s+/g, " ") }));
+      for (const [id, , passage] of points) {
+        if (!/^[a-z0-9-]+$/.test(id)) continue;
+        const matches = blocks.filter(({ text }) => text.includes(passage.toLowerCase()));
+        if (matches.length !== 1) continue;
+        const [{ node }] = matches;
+        if (node.data?.hProperties) continue;
+        node.data = { ...node.data, hProperties: { id: `reading-${id}`, tabIndex: -1 } };
+        anchored.add(id);
+      }
+    };
+  }).use(html).process(content);
   return result.toString();
 }
 

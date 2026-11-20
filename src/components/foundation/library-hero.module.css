@@ -1,0 +1,104 @@
+.stage {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  overflow: hidden;
+  container-type: size;
+  pointer-events: none;
+}
+
+.plate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, calc(100cqh * 1672 / 941));
+  aspect-ratio: 1672 / 941;
+  transform: translate(-50%, -50%);
+}
+
+.plate .art,
+.effects {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: auto;
+}
+
+.effects {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.doorway {
+  position: absolute;
+  inset: 13% 7% 27% 59.5%;
+  display: grid;
+  align-items: end;
+  justify-items: end;
+  padding: 0 clamp(.45rem, 2vw, 1.5rem) clamp(.45rem, 2vw, 1.5rem) 0;
+  border-radius: 42% 42% 2% 2% / 33% 33% 2% 2%;
+  pointer-events: auto;
+  text-decoration: none;
+  background: radial-gradient(ellipse at 58% 69%, rgb(255 188 105 / 15%), transparent 66%);
+  box-shadow: inset 0 0 0 1px transparent;
+  transition: box-shadow 250ms ease-out;
+}
+
+.doorway span {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgb(255 226 181 / 72%);
+  border-radius: 50%;
+  background: rgb(16 12 10 / 87%);
+  color: #ffe2b5;
+}
+
+.doorway:is(:hover, :focus-visible) {
+  box-shadow: inset 0 0 0 1px rgb(255 224 170 / 75%), inset 0 0 5rem rgb(255 196 122 / 32%);
+}
+
+.doorway:focus-visible span { box-shadow: 0 0 0 2px #090e13, 0 0 0 4px #ffe2b5; }
+
+@media (max-width: 42rem) {
+  .stage {
+    position: relative;
+    z-index: auto;
+    inset: auto;
+    aspect-ratio: 5 / 4;
+    container-type: normal;
+  }
+
+  .stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(0deg, #080b0e, rgb(8 11 14 / 45%) 11%, transparent 31%);
+  }
+
+  .plate {
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 852 / 941;
+    transform: none;
+  }
+
+  .doorway {
+    z-index: 1;
+    inset: 14% 11% 38% 20%;
+    padding-inline-end: .65rem;
+  }
+
+  @media (orientation: landscape) {
+    .stage { aspect-ratio: 3 / 2; }
+    .plate { top: -6vw; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .effects { display: none; }
+  .doorway { transition: none; }
+}

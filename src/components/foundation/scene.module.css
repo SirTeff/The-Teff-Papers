@@ -1,0 +1,57 @@
+.scene {
+  isolation: isolate;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.plane {
+  position: absolute;
+  inset: 0;
+  transform: translate3d(var(--pointer-x, 0px), var(--pointer-y, 0px), 0) scale(1.025);
+  transition: transform 360ms ease-out;
+}
+
+.plane:where([data-depth="base"][data-ambient]) { animation: slowDrift 15s ease-in-out infinite alternate; }
+.plane:where([data-depth="background"]) {
+  transform: translate3d(calc(var(--pointer-x, 0px) * -.4), calc(var(--pointer-y, 0px) * -.4), 0) scale(1.025);
+  animation: slowDrift 19s -6s ease-in-out infinite alternate-reverse;
+}
+.plane:where([data-depth="foreground"]) {
+  transform: translate3d(calc(var(--pointer-x, 0px) * 1.6), calc(var(--pointer-y, 0px) * 1.6), 0) scale(1.065);
+  animation: slowDrift 12s -3s ease-in-out infinite alternate;
+}
+
+@keyframes slowDrift {
+  from { translate: -5px 1px; }
+  to { translate: 7px -4px; }
+}
+
+.plane .fill,
+.plane .layer {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: auto;
+}
+
+.plane .layer { background: none; }
+.plane .layer::after { display: none; }
+
+.light {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, rgb(255 198 134 / 26%), transparent 64%);
+  width: 32%;
+  height: 52%;
+  top: -26%;
+  left: -16%;
+  translate: var(--light-x, 76vw) var(--light-y, 22vh);
+  transition: opacity 500ms ease, translate 360ms ease-out;
+}
+
+.scene[data-light-tracked] .light { opacity: .9; }
+
+@media (prefers-reduced-motion: reduce) {
+  .plane { transform: none; translate: none; transition: none; }
+  .light { display: none; }
+}
