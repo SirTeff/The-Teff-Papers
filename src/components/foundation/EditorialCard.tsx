@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/shared/ArrowIcon";
 import Link from "next/link";
 import type { ComponentProps } from "react";
 import type { Paper } from "@/lib/papers";
@@ -33,7 +34,7 @@ export function EditorialCard({
           <Link href={"/papers/" + paper.slug} prefetch={false}>{paper.title}</Link>
         </Heading>
         <p className={styles.cardExcerpt}>{paper.excerpt}</p>
-        <span className={styles.cardArrow} aria-hidden="true">↗</span>
+        <ArrowIcon className={styles.cardArrow} direction="up-right" />
       </div>
     </article>
   );

@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/shared/ArrowIcon";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { EditorialCard } from "@/components/foundation/EditorialCard";
@@ -78,7 +79,7 @@ export default async function FoundationDemo() {
             <h1 id="foundation-title">Editorial<br />foundations</h1>
             <p className={styles.lead}>Atmosphere for discovery. A steady page for reading.</p>
             <div className={styles.actions}>
-              <a className={foundation.control} href="#editorial-cards">View components <span aria-hidden="true">↓</span></a>
+              <a className={foundation.control} href="#editorial-cards">View components <ArrowIcon direction="down" /></a>
               <MotionToggle />
             </div>
           </div>
@@ -118,7 +119,7 @@ export default async function FoundationDemo() {
           <h2 id="reading-heading">{introduction.title}</h2>
           <div className={styles.reading}>
             <div dangerouslySetInnerHTML={{ __html: readingSample }} />
-            <a href={"/papers/" + introduction.slug}>Read the full paper <span aria-hidden="true">→</span></a>
+            <a href={"/papers/" + introduction.slug}>Read the full paper <ArrowIcon direction="right" /></a>
           </div>
         </section>
       </div>

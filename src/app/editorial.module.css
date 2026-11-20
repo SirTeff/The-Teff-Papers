@@ -430,11 +430,9 @@
 }
 
 @media (max-width: 42rem) {
-  .homeHero { align-items: flex-end; min-height: 0; padding-block: 16.5rem 2.5rem; }
+  .homeHero { min-height: 0; padding-block: 0 2.5rem; background: #080b0e; }
   .homeHero h1 { font-size: clamp(2.75rem, 11vw, 4.5rem); }
-  .libraryScrim {
-    background: linear-gradient(0deg, #080b0e, rgb(8 11 14 / 98%) 16%, rgb(8 11 14 / 90%) 35%, rgb(8 11 14 / 72%) 56%, transparent 80%);
-  }
+  .libraryScrim { display: none; }
   .gallery { grid-template-columns: 1fr; }
   .paperBackdrop { inset-inline-start: 0; }
   .paperCopy { max-width: none; }

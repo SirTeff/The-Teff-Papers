@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowIcon } from "@/components/shared/ArrowIcon";
 import { publicationArtwork } from "@/lib/artwork";
 import { EditorialArtwork } from "./EditorialArtwork";
 import { LibraryHeroMotion } from "./LibraryHeroMotion";
@@ -12,7 +13,7 @@ export function LibraryHero() {
         <EditorialArtwork className={styles.art} image={{ ...publicationArtwork.home, sizes: "100vw" }} eager />
         <LibraryHeroMotion />
         <Link className={styles.doorway} href="/papers" prefetch={false} aria-label="Explore the papers through the library entrance">
-          <span aria-hidden="true">↗</span>
+          <span aria-hidden="true"><ArrowIcon direction="up-right" /></span>
         </Link>
       </div>
     </div>

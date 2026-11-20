@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/shared/ArrowIcon";
 import Link from "next/link";
 import { getMarginCounts } from "@/lib/margin/admin-repository";
 import { requireStudioAuthorization } from "@/lib/security/require-studio-authorization";
@@ -25,7 +26,7 @@ export default async function StudioDashboardPage() {
           ))}
         </div>
       </section>
-      <Link className="studio-primary-link" href="/studio/margin?status=pending">Open pending queue <span aria-hidden="true">→</span></Link>
+      <Link className="studio-primary-link" href="/studio/margin?status=pending">Open pending queue <ArrowIcon direction="right" /></Link>
     </div>
   );
 }

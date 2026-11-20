@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/shared/ArrowIcon";
 import Link from "next/link";
 import { EditorialArtwork } from "@/components/foundation/EditorialArtwork";
 import { EditorialCard } from "@/components/foundation/EditorialCard";
@@ -25,8 +26,8 @@ export default function Home() {
               <p className={styles.heroSupport}>This is mine.</p>
               <p className={styles.heroDescription}>The permanent home for ideas before they become products.</p>
               <div className={styles.actions}>
-                <a className={styles.primaryLink} href="#latest-papers">Begin Reading <span aria-hidden="true">↘</span></a>
-                <Link className={styles.lineLink} href="/papers" prefetch={false}>Explore the papers <span aria-hidden="true">↗</span></Link>
+                <a className={styles.primaryLink} href="#latest-papers">Begin Reading <ArrowIcon direction="down-right" /></a>
+                <Link className={styles.lineLink} href="/papers" prefetch={false}>Explore the papers <ArrowIcon direction="up-right" /></Link>
                 <MotionToggle />
               </div>
             </div>
@@ -37,7 +38,7 @@ export default function Home() {
         <div className={styles.frame} data-motion-reveal>
           <div className={styles.sectionTop}>
             <h2 id="feature-title">Featured paper</h2>
-            <Link className={styles.lineLink} href="/papers">View the full archive <span aria-hidden="true">↗</span></Link>
+            <Link className={styles.lineLink} href="/papers">View the full archive <ArrowIcon direction="up-right" /></Link>
           </div>
           {featured && <EditorialCard paper={featured} featured artworkEnd sizes="(max-width: 48rem) 92vw, 720px" artwork={{ fetchPriority: "low" }} />}
           {recent.length > 0 && (
@@ -56,8 +57,8 @@ export default function Home() {
             <h2 id="discovery-title">Continuing lines of thought</h2>
             <p>The Teff Papers is a long-term public journal where I document my thinking across artificial intelligence, personal digital intelligence, automation, systems thinking, blockchain, faith, leadership, technology, and human behaviour.</p>
             <div className={styles.actions}>
-              <Link className={styles.lineLink} href="/about">About The Teff Papers <span aria-hidden="true">↗</span></Link>
-              <Link className={styles.lineLink} href="/projects">Explore the projects <span aria-hidden="true">↗</span></Link>
+              <Link className={styles.lineLink} href="/about">About The Teff Papers <ArrowIcon direction="up-right" /></Link>
+              <Link className={styles.lineLink} href="/projects">Explore the projects <ArrowIcon direction="up-right" /></Link>
             </div>
             <details className={styles.discoveryNotes}>
               <summary>The work lives in the space where these things meet.</summary>
@@ -83,7 +84,7 @@ export default function Home() {
             <p className={styles.kicker}>A research series</p>
             <h2 id="frontier-title">The Frontier</h2>
             <p>Follow the inquiry into intelligence, judgement, and what emerges in the interaction between humans and machines.</p>
-            <Link className={styles.lineLink} href="/categories/the-frontier">Explore The Frontier <span aria-hidden="true">↗</span></Link>
+            <Link className={styles.lineLink} href="/categories/the-frontier">Explore The Frontier <ArrowIcon direction="up-right" /></Link>
           </div>
         </div>
       </section>
@@ -96,7 +97,7 @@ export default function Home() {
             <h2 id="manifesto-title">The objective is to build a body of work.</h2>
             <p>The objective is not to become a content creator.</p>
             <p>The Teff Papers exists because ideas need a place to mature before the world only sees the finished result. Some thoughts begin as small observations, questions, frustrations, or patterns, but when they are documented properly, they can become the foundation for something much bigger.</p>
-            <Link className={styles.lineLink} href="/manifesto">Read the Manifesto <span aria-hidden="true">↗</span></Link>
+            <Link className={styles.lineLink} href="/manifesto">Read the Manifesto <ArrowIcon direction="up-right" /></Link>
           </div>
         </div>
       </section>
@@ -105,12 +106,12 @@ export default function Home() {
           <div>
             <p className={styles.kicker}>An open invitation</p>
             <h2 id="invitation-title">Start with the Manifesto, then follow the papers as the thinking develops.</h2>
-            <Link className={styles.lineLink} href="/manifesto">Read the Manifesto <span aria-hidden="true">↗</span></Link>
+            <Link className={styles.lineLink} href="/manifesto">Read the Manifesto <ArrowIcon direction="up-right" /></Link>
           </div>
           <div>
             <p>Start with the latest papers and follow the ideas as they develop.</p>
             <p>Some pieces are reflections. Some are product notes. Some are systems thinking. Some are early signals of ideas that may later become products, companies, research, books, or something bigger.</p>
-            <a className={styles.lineLink} href="#latest-papers">Latest papers <span aria-hidden="true">↗</span></a>
+            <a className={styles.lineLink} href="#latest-papers">Latest papers <ArrowIcon direction="up-right" /></a>
           </div>
         </div>
       </section>

@@ -26,25 +26,6 @@ export type ArtworkRecord = ArtworkSource & {
   backdropTone?: "bright";
 };
 
-function original(slug: string, alt: string, focalPoint = "65% 50%", mobile = false): ArtworkRecord {
-  return {
-    src: `/artwork/${slug}.webp`,
-    width: 1600,
-    height: 840,
-    alt,
-    focalPoint,
-    mobile: mobile ? {
-      src: `/artwork/${slug}-mobile.webp`,
-      width: 756,
-      height: 900,
-      focalPoint: "50% 52%",
-    } : undefined,
-    credit: "The Teff Papers",
-    provenance: "Original local procedural illustration. No external source asset.",
-    status: "provisional",
-  };
-}
-
 function frontierRoom(slug: string, alt: string): ArtworkRecord {
   return {
     src: `/artwork/frontier/${slug}.webp`,
@@ -200,5 +181,14 @@ export const publicationArtwork = {
     ...frontierRoom("the-frontier-may-exist-in-the-interaction", "A researcher and a luminous figure face one another in a library research wing."),
     focalPoint: "65% 51%",
   },
-  manifesto: original("manifesto", "Warm light catches the layered edges of an open book.", "53% 66%"),
+  manifesto: {
+    src: "/artwork/manifesto-founding/homepage-teaser.webp",
+    width: 1520,
+    height: 760,
+    focalPoint: "50% 50%",
+    alt: "Sunlight falls on an open manuscript, architectural sketches and a small wooden arch on a library desk.",
+    credit: "The Teff Papers",
+    provenance: "Cropped from the approved Founding Manuscript chamber artwork for the homepage.",
+    status: "approved",
+  } satisfies ArtworkRecord,
 };

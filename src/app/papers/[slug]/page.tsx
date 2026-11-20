@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/shared/ArrowIcon";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -83,7 +84,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
       <div className={openingStyles.light} aria-hidden="true" />
       <div className={openingStyles.frame}>
         <div>
-          <Link className={styles.returnLink} href="/papers">← The Papers</Link>
+          <Link className={styles.returnLink} href="/papers"><ArrowIcon direction="left" /> The Papers</Link>
           <div className={openingStyles.copy}>
             {paper.paperType && <p className={styles.kicker}>{paper.paperType}</p>}
             <h1>{paper.title}</h1>
